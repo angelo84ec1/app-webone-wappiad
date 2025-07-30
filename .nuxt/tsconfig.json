@@ -122,33 +122,36 @@
       "#app-manifest": [
         "./manifest/meta/dev.json"
       ],
-      "#build": [
-        "."
-      ],
-      "#build/*": [
-        "./*"
-      ],
       "#components": [
         "./components"
       ]
     },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
     "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "module": "preserve",
+    "noEmit": true,
+    "lib": [
+      "ESNext",
+      "dom",
+      "dom.iterable",
+      "webworker"
+    ],
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "useDefineForClassFields": true,
-    "strict": true,
-    "noImplicitThis": true,
-    "esModuleInterop": true,
     "types": [],
-    "verbatimModuleSyntax": true,
-    "allowJs": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
+    "useDefineForClassFields": true,
+    "noImplicitThis": true,
     "allowSyntheticDefaultImports": true
   },
   "include": [
@@ -156,23 +159,35 @@
     "../.config/nuxt.*",
     "../**/*",
     "../node_modules/@pinia/nuxt/runtime",
+    "../node_modules/@pinia/nuxt/dist/runtime",
     "../node_modules/@sidebase/nuxt-pdf/runtime",
+    "../node_modules/@sidebase/nuxt-pdf/dist/runtime",
     "../node_modules/nuxt-proxy/runtime",
+    "../node_modules/nuxt-proxy/dist/runtime",
     "../node_modules/@nuxtjs/i18n/runtime",
+    "../node_modules/@nuxtjs/i18n/dist/runtime",
     "../node_modules/@nuxt/devtools/runtime",
+    "../node_modules/@nuxt/devtools/dist/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
+    "../node_modules/@nuxt/telemetry/dist/runtime",
     ".."
   ],
   "exclude": [
+    "../dist",
     "../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@pinia/nuxt/runtime/server",
+    "../node_modules/@pinia/nuxt/dist/runtime/server",
     "../node_modules/@sidebase/nuxt-pdf/runtime/server",
+    "../node_modules/@sidebase/nuxt-pdf/dist/runtime/server",
     "../node_modules/nuxt-proxy/runtime/server",
+    "../node_modules/nuxt-proxy/dist/runtime/server",
     "../node_modules/@nuxtjs/i18n/runtime/server",
+    "../node_modules/@nuxtjs/i18n/dist/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
+    "../node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
-    "../dist",
+    "../node_modules/@nuxt/telemetry/dist/runtime/server",
     "../.output"
   ]
 }

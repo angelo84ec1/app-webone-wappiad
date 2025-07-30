@@ -1,28 +1,307 @@
 <template>
-    <div  style="width: 100%;" >
-      <div class="spacer"></div>
-      <p class="ml-12 font-semibold  inline-block sm:inline ">Tus opiniones son importantes para nosotros, ingresa tus datos y pronto te atenderemos:</p>
-      <div class="spacer"></div>
-      <form @submit.prevent="sendMail" class="formcontact w-full  rounded-md">
-        <label for="nombre">Nombres:</label>
-        <input v-model="formData.nombre" type="text" id="nombre" name="nombre" class="w-full mb-4 p-2 rounded-md">
-  
-        <label for="telefono">Teléfono:</label>
-        <input v-model="formData.telefono" type="tel" id="telefono" name="telefono" class="w-full mb-4 p-2 rounded-md">
-  
-        <label  for="correo">Correo:</label>
-        <input v-model="formData.correo"  type="email" id="correo" name="correo" class="w-full mb-4 p-2 rounded-md">
-  
-        <label for="requerimiento">Requerimiento:</label>
-        <textarea v-model="formData.requerimiento" id="requerimiento" name="requerimiento" class="w-full mb-4 p-2 rounded-md"></textarea>
+  <div style="width: 100%;">
+    <div class="spacer"></div>
+    <p class="ml-12  font-semibold inline-block sm:inline text-gray-700">
+      Estaremos gustos de enviarte mayor información sin compromiso
+    </p>
+    <div class="spacer"></div>
     
+    <form @submit.prevent="sendMail" class="formcontact w-full max-w-2xl mx-auto mt-[40px] p-6">
+      <!-- Campo Nombres -->
+      <div class="form-group mb-6 relative">
+        <input 
+          v-model="formData.nombre" 
+          type="text" 
+          id="nombre" 
+          name="nombre" 
+          class="form-input peer w-full px-4 py-3 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-[#232c4d] transition-colors duration-300"
+          placeholder="Nombres"
+          @focus="setFocusField('nombre')"
+          @blur="removeFocusField('nombre')"
+        >
+        <label 
+          for="nombre" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+        >
+          Nombres
+        </label>
+      </div>
 
-  <button type="submit" class="estil1 bg-[#FFF200] rounded-md  animate-squeeze  ">Enviar Solicitud</button>
+            <!-- Campo Empresa -->
+            <div class="form-group mb-6 relative">
+        <input 
+          v-model="formData.empresa" 
+          type="text" 
+          id="empresa" 
+          name="empresa" 
+          class="form-input peer w-full px-4 py-3 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-[#232c4d] transition-colors duration-300"
+          placeholder="Empresa"
+          @focus="setFocusField('empresa')"
+          @blur="removeFocusField('empresa')"
+        >
+        <label 
+          for="empresa" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+        >
+          Empresa
+        </label>
+      </div>
+
+
+        <!-- Select # Trabajadores -->
+        <div class="form-group mb-6 relative">
+        <select 
+          v-model="formData.trabajadores" 
+          id="trabajadores" 
+          name="trabajadores" 
+          class="form-select peer w-full px-4 py-2 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-500 transition-colors duration-300 appearance-none cursor-pointer"
+          @focus="setFocusField('Trabajadores')"
+          @blur="removeFocusField('Trabajadores')"
+        >
+          <option value="" disabled selected hidden></option>
+          <option value="1-10">1 - 10</option>
+          <option value="+10">+10</option>
+          <option value="+20">+20</option>
+          <option value="+30">+30</option>
+          <option value="+40">+40</option>
+          <option value="+50">+50</option>
+          <option value="+100">+100</option>
+          <option value="+500">+500</option>
+          <option value="+1000">+1000</option>
+          <option value="+5000">+5000</option>
+          <option value="+10000">+10000</option>
+          <option value="+100000">+100000</option>
+          <option value="+1000000<">+1000000</option>
+
+        </select>
+        <label 
+          for="pais" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+          :class="formData.trabajadores? 'text-sm -top-2.5 text-blue-500' : 'text-base text-gray-400 top-3'"
+        >
 
         
-      </form>
-    </div>
-  </template>
+          No. Trabajadores
+        </label>
+        <!-- Icono de flecha personalizada -->
+        <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Campo Teléfono -->
+      <div class="form-group mb-6 relative">
+        <input 
+        v-model="formData.telefono" 
+        type="tel" 
+        id="telefono" 
+        name="telefono" 
+       class="form-input peer w-full px-4 py-3 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-500 transition-colors duration-300"
+       placeholder="Teléfono"
+       @focus="setFocusField('telefono')"
+       @blur="removeFocusField('telefono')"
+       @input="formData.telefono = formData.telefono.replace(/\D/g, '')"
+        />
+        <label 
+          for="telefono" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+        >
+          Whatsapp
+        </label>
+      </div>
+
+      <!-- Campo Correo -->
+      <div class="form-group mb-6 relative">
+        <input 
+          v-model="formData.correo" 
+          type="email" 
+          id="correo" 
+          name="correo" 
+          class="form-input peer w-full px-4 py-3 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-500 transition-colors duration-300"
+          placeholder="Correo"
+          @focus="setFocusField('correo')"
+          @blur="removeFocusField('correo')"
+        >
+        <label 
+          for="correo" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+        >
+          Correo electrónico
+        </label>
+      </div>
+
+      <!-- Select de Servicios -->
+      <div class="form-group mb-6 relative">
+        <select 
+          v-model="formData.servicio" 
+          id="servicio" 
+          name="servicio" 
+          class="form-select peer w-full px-4 py-2 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-500 transition-colors duration-300 appearance-none cursor-pointer"
+          @focus="setFocusField('servicio')"
+          @blur="removeFocusField('servicio')"
+        >
+          <option value="" disabled selected hidden></option>
+          <option value="Desarrollo-web">Desarrollo Web a la Medida</option>
+          <option value="Desarrollo-apps">Desarrollo de Apps</option>
+          <option value="Entrenamiento-ia">Entrenamiento Agentes IA</option>
+          <option value="Bot-whatsapp">Bots LLM con IA para Whatsapp</option>
+          <option value="Ecommerce-medida">Ecommerce a la medida en React - Next - Strapi</option>
+          <option value="Ecommerce-cms">Ecommerce CMS - Webflow - Shopify - Woocommerce</option>
+          <option value="Integracion apis">Integración Apis a Erps - Crm - Sap B1</option>
+          <option value="Solucion-bugs">Solución Bugs Apps - Web - IA</option>
+          <option value="Landing-page">Landing Page (Embudo de Ventas)</option>
+          
+        </select>
+        <label 
+          for="servicio" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+          :class="formData.servicio ? 'text-sm -top-2.5 text-blue-500' : 'text-base text-gray-400 top-3'"
+        >
+
+        
+          Servicio de interés
+        </label>
+        <!-- Icono de flecha personalizada -->
+        <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+
+
+       <!-- Select de Presupuesto -->
+       <div class="form-group mb-6 relative">
+        <select 
+          v-model="formData.presupuesto" 
+          id="presupuesto" 
+          name="presupuesto" 
+          class="form-select peer w-full px-4 py-2 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-500 transition-colors duration-300 appearance-none cursor-pointer"
+          @focus="setFocusField('Presupuesto')"
+          @blur="removeFocusField('Presupuesto')"
+        >
+          <option value="" disabled selected hidden></option>
+          <option value="$499">$499</option>
+          <option value="$999">$999</option>
+          <option value="$1999">$1999</option>
+          <option value="$2999">$2999</option>
+          <option value="$3999">$3999</option>
+          <option value="$4999">$4999</option>
+          <option value="$7999">$7999</option>
+          <option value="$9999">$9999</option>
+          <option value="$19999">$19999</option>
+          <option value="$29999">$29999</option>
+          <option value="$3999">$39999</option>
+          <option value="$49999">$49999</option>
+          <option value="+$50k">+$50k</option>
+          <option value="+$100k">+$100k</option>
+          <option value="+$200k">+$200k</option>
+          <option value="+$500k">+$500k</option>
+          <option value="+$1M">+$1M</option>
+        </select>
+        <label 
+          for="presupuesto" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+          :class="formData.presupuesto ? 'text-sm -top-2.5 text-blue-500' : 'text-base text-gray-400 top-3'"
+        >
+
+        
+          Presupuesto
+        </label>
+        <!-- Icono de flecha personalizada -->
+        <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+
+
+        <!-- Select de Pais -->
+        <div class="form-group mb-6 relative">
+        <select 
+          v-model="formData.pais" 
+          id="pais" 
+          name="pais" 
+          class="form-select peer w-full px-4 py-2 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-500 transition-colors duration-300 appearance-none cursor-pointer"
+          @focus="setFocusField('Pais')"
+          @blur="removeFocusField('Pais')"
+        >
+          <option value="" disabled selected hidden></option>
+          <option value="Argentina">Argentina</option>
+          <option value="Brasil">Brasil</option>
+          <option value="Chile">Chile</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="Espania">España</option>
+          <option value="Usa">Estados Unidos</option>
+          <option value="Mexico">México</option>
+          <option value="Panama">Panamá</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Peru">Perú</option>
+          <option value="Republica-dominicana">República Dominicana</option>
+          <option value="Ueuropea">Unión Europea</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <label 
+          for="pais" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+          :class="formData.pais ? 'text-sm -top-2.5 text-blue-500' : 'text-base text-gray-400 top-3'"
+        >
+
+        
+          Pais
+        </label>
+        <!-- Icono de flecha personalizada -->
+        <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+
+
+      <!-- Campo Requerimiento -->
+      <div class="form-group mb-8 relative">
+        <textarea 
+          v-model="formData.requerimiento" 
+          id="requerimiento" 
+          name="requerimiento" 
+          rows="4"
+          class="form-textarea peer w-full px-4 py-3 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-500 transition-colors duration-300 resize-none"
+          placeholder="Requerimiento"
+          @focus="setFocusField('requerimiento')"
+          @blur="removeFocusField('requerimiento')"
+        ></textarea>
+        <label 
+          for="requerimiento" 
+          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
+        >
+          Requerimiento
+        </label>
+      </div>
+
+      <!-- Botón de envío -->
+      <div class="flex justify-center">
+        <button 
+          type="submit" 
+          class="submit-button bg-[#38f5b3]  text-gray-900 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#232c4d] focus:ring-opacity-50"
+        >
+          <span class="flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            Enviar Solicitud
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</template>
+
   
   <script>
 
@@ -37,8 +316,13 @@ export default {
     return {
       formData: {
         nombre: '',
+        empresa: '',
+        trabajadores: '',
         telefono: '',
         correo: '',
+        servicio: '',
+        presupuesto: '',
+        pais: '',
         requerimiento: ''
       }
     }
@@ -50,8 +334,13 @@ export default {
 
       if (
         !this.formData.nombre.trim() ||
+        !this.formData.empresa.trim() ||
+        !this.formData.trabajadores.trim() ||
         !this.formData.telefono.trim() ||
         !this.formData.correo.trim() ||
+        !this.formData.servicio.trim() ||
+        !this.formData.presupuesto.trim() ||
+        !this.formData.pais.trim() ||
         !this.formData.requerimiento.trim()
       ) {
         toast.error('Completa todos los campos');
@@ -60,18 +349,23 @@ export default {
 
 
       const emailData = {
-        to: "amc@automotorsclub.com",
-        subject: 'Formulario de contacto App Web AMC',
+        to: "websecuador.net@gmail.com",
+        subject: 'Formulario de contacto App Web WAPPIAD',
         text: `
-          Nombre de la empresa: ${this.formData.nombre}
-          Teléfono: ${this.formData.telefono}
+          Nombre persona: ${this.formData.nombre}
+          Empresa: ${this.formData.empresa}
+          Trabajadores: ${this.formData.trabajadores}
+          Whatsapp: ${this.formData.telefono}
           Correo: ${this.formData.correo}
-          Descripción de la alianza: ${this.formData.requerimiento}
+          Servicio: ${this.formData.servicio}
+          Presupuesto: ${this.formData.presupuesto}
+          Pais: ${this.formData.pais}
+          Descripción requerimiento: ${this.formData.requerimiento}
         `,
       };
 
       // Use strapi email plugin to send email
-      fetch(`${baseURL}/email/`, {
+      fetch(`${baseURL}/email`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -83,8 +377,13 @@ export default {
             toast.success('Correo enviado');
             this.formData = {
               nombre: '',
+              empresa: '',
+              trabajadores: '',
               telefono: '',
               correo: '',
+              servicio: '',
+              presupuesto: '',
+              pais: '',
               requerimiento: ''
             }
           } else {
@@ -99,40 +398,70 @@ export default {
   
 };
   </script>
-  <style>
-  /* Estilo inicial del botón */
-  .estil1 {
-    background-color: #FFF200;
-    color: #000000; /* Color del texto negro */
-    transition: color 0.3s; /* Agrega una transición suave para el cambio de color */
-    padding: 6px;
-  }
+ <style scoped>
+ .spacer {
+   height: 45px;
+ }
+ 
+ .formcontact {
+   background: rgba(255, 255, 255, 0.95);
+   backdrop-filter: blur(10px);
+   border-radius: 16px;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .form-group {
+   position: relative;
+ }
+ 
+ /* Animación para el borde inferior */
+ .form-input:focus,
+ .form-select:focus,
+ .form-textarea:focus {
+   border-bottom-color: #38f5b3;
+   box-shadow: 0 2px 0 0 #38f5b3;
+ }
+ 
+ /* Estilos para el select personalizado */
+ .form-select {
+   background-image: none;
+ }
+ 
+ /* Animación del botón */
+ .submit-button {
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .submit-button::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+   transition: left 0.5s;
+ }
+ 
+ .submit-button:hover::before {
+   left: 100%;
+ }
+ 
+ /* Mejoras responsivas */
+ @media (max-width: 640px) {
+   .formcontact {
+     margin: 0 1rem;
+     padding: 1.5rem;
+   }
+ }
+ 
+ /* Animación suave para todos los elementos */
+ * {
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ </style>
 
-  /* Efecto hover para cambiar el color del texto a blanco */
-  .estil1:hover {
-    color: #FFFFFF;
-    padding: 6px;
-  }
-  .spacer {
- height: 15px; /* Altura del espacio entre los divs */
-}
-
-.formcontact {
-  padding: 10px 500px 10px 80px;
-  left: 18%; /* Coloca el texto en el centro horizontal */
-  margin: 0 auto; /* Centra el elemento horizontalmente */
-}
-
-
-@media only screen and (max-width: 1076px) {
-  .formcontact  {
-    padding: 0px;
-  margin: 0 auto; /* Centra el elemento horizontalmente */
-  max-width: 600px; /* Establece un ancho máximo para el formulario */
-
-  left: 2%;
-  }
-}
-</style>
+ 
 
 

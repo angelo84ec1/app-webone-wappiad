@@ -4,7 +4,7 @@
             <!-- Header -->
             <header class="modal-container">
                 <!-- Title -->
-                <img class="logo" src="~/assets/logos/logo_amc_black.png" alt="" />
+               
                 <!-- <h2 class="title-modal">AMC</h2> -->
             </header>
 
@@ -23,7 +23,7 @@
                         Cancelar
                     </button>
                     <button type="button" class="button button--primary" @click.prevent="action">
-                        <img src="~/assets/images/notification-white.png" alt="mail-icon">
+                       
                         Enviar correo
                     </button>
                 </div>

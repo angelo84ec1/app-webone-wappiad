@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     head: {
-      title: "WAPPIAD S.A.S. Web - App - Inteligencia Artifical - Digital ",
+      title: "WAPPIAD S.A.S. Web - App - Inteligencia Artifical - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI",
       htmlAttrs: {
         lang: "es",
       },
@@ -27,13 +27,13 @@ export default defineNuxtConfig({
           hid: "description",
           name: "description",
           content:
-            "Sistema de agendamiento de citas vía web y WhatsApp. Facilita la gestión de citas y mejora la comunicación con tus clientes.",
+            "Desarrollo de web a la medida - Desarrollo de Apps - Entrenamiento de Agentes IA - Programadores Full Stack - Desarrollo Sistemas SAAS - Arquitectos de Cloud.",
         },
         { name: "format-detection", content: "telephone=no" },
         {
           name: "keywords",
           content:
-            "agendamiento de citas, sistema de citas medicas en whatsapp, gestión de citas en whatsapp, citas web, citas whatsapp, Wafidely",
+            "Desarrollo web - Desarrollo apps- Dntrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp",
         }, // Palabras clave añadidas
       ],
       link: [

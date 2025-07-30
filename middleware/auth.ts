@@ -11,7 +11,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
   const router = useRouter();
 
   if (!authStore.isAuthenticated) {
-    router.push({ path: "/landing" })
+    router.push({ path: "/home" })
     return;
   }
 

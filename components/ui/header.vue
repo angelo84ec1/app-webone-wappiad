@@ -4,29 +4,33 @@
       'fixed top-0 left-0 right-0 z-[9999]': isFixed,
       scrolled: isScrolled,
     }"
-    class="w-full p-4 flex justify-between items-center transition-all duration-300 ease-in-out"
+    class="bg-[#232c4d] w-full p-7 flex justify-between items-center transition-all duration-300 ease-in-out"
   >
     <!-- Logo o título -->
-    <nuxt-link to="#" class="flex items-center active">
-      <img
-        src="~/assets/images/logowappiad.png"
-        alt="Logo Default"
-        class="transition-all duration-300 ease-in-out"
-        :class="{ 'opacity-0 hidden': isScrolled }"
-      />
-      <img
-        src="~/assets/images/logowimtutcolor.png"
-        alt="Logo Scrolled"
-        class="transition-all duration-300 ease-in-out hidden max-w-[179px] w-full"
-        :class="{ 'opacity-100 !block': isScrolled }"
-      />
-    </nuxt-link>
+    <nuxt-link to="/home" class="flex items-center active">
+  <!-- Logo Default -->
+  <img
+    src="~/assets/images/logowappiad.png"
+    alt="Logo Default"
+    class="transition-all duration-300 ease-in-out max-w-[150px] h-auto"
+    :class="{ 'opacity-0 hidden': isScrolled }"
+  />
+  <!-- Logo Scrolled -->
+  <img
+    src="~/assets/images/logowappiadblack.png"
+    alt="Logo Scrolled"
+    class="transition-all duration-300 ease-in-out hidden max-w-[150px] h-auto"
+    :class="{ 'opacity-100 !block': isScrolled }"
+  />
+</nuxt-link>
+
+
 
     <!-- Botones -->
-    <div class="space-x-4 hide-for-mobile flex items-center">
+    <div class="space-x-4 p-0 hide-for-mobile flex items-center">
       <!-- Botón 1 -->
 
-      <nuxt-link to="/landing" class="active">
+      <nuxt-link to="/home" class="active">
         <button
           class="hover:text-[#7d7d7d] text-sm px-4 py-2 rounded-lg"
           style="font-family: 'Montserrat', sans-serif; font-size: 18px"
@@ -36,7 +40,7 @@
       </nuxt-link>
 
       <!-- Botón 2 -->
-      <nuxt-link to="/planes" class="active">
+      <nuxt-link to="/servicios" class="active">
         <button
           class="hover:text-[#7d7d7d] text-sm px-4 py-2 rounded-lg"
           style="font-family: 'Montserrat', sans-serif; font-size: 18px"
@@ -47,7 +51,7 @@
 
       <!-- Botón 3 -->
 
-      <nuxt-link to="/beneficiosclub" class="active">
+      <nuxt-link to="/chatbotconinteligenciaartificial" class="active">
         <button
           class="hover:text-[#7d7d7d] text-sm px-4 py-2 rounded-lg"
           style="font-family: 'Montserrat', sans-serif; font-size: 18px"
@@ -58,39 +62,36 @@
       <!-- Language Dropdown -->
 
       <!-- Botón 4 -->
+      <nuxt-link to="/contacto" class="active">
+        <button
+          class="hover:text-[#7d7d7d] text-sm px-4 py-2 rounded-lg"
+          style="font-family: 'Montserrat', sans-serif; font-size: 18px"
+        >
+          {{ t("layout.header.contact") }}
+        </button>
+      </nuxt-link>
     </div>
 
     <!-- Links de inicio de sesión y registro -->
     <div class="space-x-4 hide-for-mobile flex items-center">
-      <!-- Link de Iniciar Sesión con icono -->
-      <nuxt-link to="/alianzas">
-        <button
-          class="bg-[#38f5b3] text-[#232c4d] hover:bg-[#9dfa2b] text-sm px-4 py-2 rounded-lg transition-colors duration-300"
-          style="font-family: 'Montserrat', sans-serif; font-size: 18px"
-        >
-          {{ t("layout.header.register") }}
-        </button>
-      </nuxt-link>
 
-      <!-- Link de Registro con icono -->
-      <nuxt-link to="/login">
-        <button
-          class="bg-[#38f5b3] text-[#232c4d] hover:bg-[#9dfa2b] text-sm px-4 py-2 rounded-lg transition-colors duration-300"
-          style="font-family: 'Montserrat', sans-serif; font-size: 18px"
-        >
-          {{ t("layout.header.login") }}
-        </button>
-      </nuxt-link>
-      <div class="language-selector hide-for-mobile">
+      
+      <div class=" language-selector hide-for-mobile">
         <select
           @change="changeLanguage($event)"
           class="bg-[#38f5b3] text-[#232c4d] hover:bg-[#9dfa2b] text-sm px-4 py-2 rounded-lg transition-colors duration-300"
           style="font-family: 'Montserrat', sans-serif; font-size: 18px"
           v-model="selectedLanguage"
         >
-          <option value="es">Español</option>
-          <option value="en">English</option>
-          <option value="pt">Português</option>
+          
+          <option value="es" ><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flag-icon">
+        <rect width="24" height="24" rx="3" ry="3" style="fill: #ffcc00;"></rect>
+        <rect y="8" width="24" height="8" style="fill: #d52b1e;"></rect>
+        <rect y="16" width="24" height="8" style="fill: #ffc400;"></rect>
+      </svg>ES</option>
+
+          <option value="en">EN</option>
+          <option value="pt">PO</option>
         </select>
       </div>
     </div>
@@ -117,19 +118,25 @@
       <div class="menuList" v-if="isActive">
         <ul>
           <li>
-            <a href="/landing"> {{ t("layout.header.start") }} </a>
+            <a href="/home"> {{ t("layout.header.start") }} </a>
           </li>
           <!-- Botón 2 -->
           <li>
-            <nuxt-link to="/nosotros">
+            <nuxt-link to="/servicios">
               {{ t("layout.header.pricing") }}
             </nuxt-link>
           </li>
 
           <li>
-            <a href="/beneficiosclub">
+            <a href="/chatbotconinteligenciaartificial">
               {{ t("layout.header.successCases") }}
             </a>
+          </li>
+
+          <li>
+            <nuxt-link to="/contacto">
+              {{ t("layout.header.contact") }}
+            </nuxt-link>
           </li>
         </ul>
       </div>
@@ -137,7 +144,7 @@
   </header>
 
   <div
-    class="hide-for-mobile bg-white py-4 text-[#000000] text-sm flex justify-center items-center space-x-4"
+    class="hide-for-mobile bg-white py-0 text-[#000000] text-sm flex justify-center items-center space-x-4"
     style="font-family: 'Poppins', sans-serif; font-size: 18px"
   ></div>
 </template>
@@ -412,5 +419,8 @@ nav::after {
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
   padding-right: 1.5rem;
+
 }
+
+
 </style>

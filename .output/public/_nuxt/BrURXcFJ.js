@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as o,ab as s}from"./CapJEXHA.js";const n={name:"DefaultLayout"};function r(e,c,l,f,u,_){return a(),o("div",null,[s(e.$slots,"default")])}const p=t(n,[["render",r]]);export{p as default};

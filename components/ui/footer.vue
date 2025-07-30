@@ -10,10 +10,10 @@
       <span class="text-lg">{{ $t("layout.footer.description") }}</span>
     </p>
     <button
-      class="px-5 py-2 font-medium text-slate-700 shadow-xl hover:bg-white duration-150 rounded-lg bg-[#9dfa2b]"
-    >
-      {{ $t("layout.footer.register_button") }}
-    </button>
+  class="px-5 py-3 sm:py-1 text-sm sm:text-base font-medium text-slate-700 shadow-xl hover:bg-white duration-150 rounded-lg bg-[#9dfa2b]"
+>
+  {{ $t("layout.footer.register_button") }}
+</button>
   </div>
 
   <footer
@@ -23,16 +23,17 @@
   >
     <div class="mx-auto max-w-screen-xl px-2 py-2 sm:px-3 lg:px-8">
       <div class="menu">
-        <div class="grid grid-cols-1 gap-4 place-items-justify pt-1 pb-2">
-          <img
-            src="~/assets/images/wafidelynegroturquesaverde.png"
-            style="height: 2em; width: 10em"
-            alt="Wafidely"
-          />
-          <p class="text-gray-700 text-justify max-w-xs tracking-tight ml-1">
-            {{ $t("layout.footer.company_info.description") }}
-          </p>
-        </div>
+  <div class="grid grid-cols-1 gap-4 place-items-justify pt-1 pb-2">
+    <img
+      src="/assets/images/logowappiad.png"
+      
+      alt="Wafidely"
+      class="ease-in-out max-w-[150px] h-auto"
+    />
+    <p class="text-gray-700 text-justify max-w-xs tracking-tight ml-1">
+      {{ $t("layout.footer.company_info.description") }}
+    </p>
+  </div>
 
         <div class="menu-item">
           <div class="menu-title">
@@ -40,17 +41,17 @@
           </div>
           <ul>
             <li>
-              <a class="menu-link" href="plansilver">{{
+              <a class="menu-link" href="servicios">{{
                 $t("layout.footer.plans.waPyme")
               }}</a>
             </li>
             <li>
-              <a class="menu-link" href="plangold">{{
+              <a class="menu-link" href="servicios">{{
                 $t("layout.footer.plans.waMedium")
               }}</a>
             </li>
             <li>
-              <a class="menu-link" href="planblack">{{
+              <a class="menu-link" href="servicios">{{
                 $t("layout.footer.plans.waLarge")
               }}</a>
             </li>
@@ -62,11 +63,7 @@
             {{ $t("layout.footer.info.title") }}
           </div>
           <ul>
-            <li>
-              <a class="menu-link" href="/preguntasfrecuentes">{{
-                $t("layout.footer.info.faq")
-              }}</a>
-            </li>
+           
             <li>
               <a class="menu-link" href="/terminosycondiciones">{{
                 $t("layout.footer.info.terms")
@@ -97,9 +94,16 @@
     <!-- Columna Central: Logotipo -->
 
     <!-- Columna Derecha: Iconos de Redes Sociales -->
-    <div class="foobackred ml-0 md:ml-700 flex items-center">
+    <div class="foobackred ml-0 md:ml-[700px] flex items-center gap-6">
+
+      <img
+    src="~/assets/images/aws-svgrepo-com.png"
+    alt="Logo AWS"
+    class="w-12 h-auto mr-5"
+  />
+
       <a
-        href="https://www.facebook.com/wafidely"
+        href="https://www.facebook.com/wappiad"
         target="_blank"
         class="text-[#232c4d] hover:text-[#38f5b3] transition duration-300 text-right cursor-pointer"
       >
@@ -107,7 +111,7 @@
         <!-- Icono de Facebook -->
       </a>
       <a
-        href="https://www.instagram.com/wafidely"
+        href="https://www.instagram.com/wappiad"
         target="_blank"
         class="text-[#232c4d] hover:text-[#38f5b3] transition duration-300 cursor-pointer"
       >
@@ -115,15 +119,30 @@
         <!-- Icono de Instagram -->
       </a>
       <a
-        href="https://www.tiktok.com/wafidely"
+        href="https://www.linkedin.com/company/wappiad-s-a-s"
         target="_blank"
         class="text-[#232c4d] hover:text-[#38f5b3] transition duration-300 cursor-pointer"
       >
-        <i class="fab fa-tiktok ml-5"></i>
+        <i class="fab fa-linkedin ml-5"></i>
         <!-- Icono de TikTok -->
       </a>
     </div>
   </div>
+
+  <div class="whatsapp-float">
+  <a
+    href="https://wa.me/593958893378"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="https://amcacmin.automotorsclub.com/uploads/Animation_1750186633654_d5a4a6806e.gif"
+      alt="WhatsApp"
+      class="whatsapp-icon"
+    />
+  </a>
+</div>
+
 </template>
 
 <script setup>
@@ -220,10 +239,31 @@ const { t } = useI18n();
   flex-shrink: 0;
 }
 
-.bottoncontrata {
-  color: #c028b9;
-  transition: color 0.3s, background 0.3s; /* Transición suave para el cambio de color y fondo */
+.whatsapp-float {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  
+  z-index: 1000;
 }
+
+.whatsapp-icon {
+  
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  margin-top: -150px;
+}
+
+.whatsapp-icon:hover {
+
+transform: scale(1.1);
+}
+
+
 
 .bottoncontrata:hover {
   color: #000000;

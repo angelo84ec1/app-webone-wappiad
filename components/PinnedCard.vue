@@ -14,10 +14,10 @@ import "swiper/css/pagination";
 gsap.registerPlugin(ScrollTrigger);
 
 const pinImage = ref([
-  new URL("~/assets/images/svgs/puzzle538cc84.svg", import.meta.url).href,
-  new URL("~/assets/images/svgs/moneyaf2ed1a.svg", import.meta.url).href,
-  new URL("~/assets/images/svgs/globe1696ad6.svg", import.meta.url).href,
-  new URL("~/assets/images/svgs/avatar5ae0d1d.svg", import.meta.url).href,
+  new URL("~/assets/images/modelo.png", import.meta.url).href,
+  new URL("~/assets/images/moneda-digital.png", import.meta.url).href,
+  new URL("~/assets/images/globo.png", import.meta.url).href,
+  new URL("~/assets/images/apoyo.png", import.meta.url).href,
 ]);
 
 const pinContent = ref([
@@ -134,8 +134,13 @@ onMounted(() => {
         </div>
       </div>
       <div class="flex flex-col !z-10 h-[100vh] pin-right relative">
+        <img
+    src="~/assets/images/background-rigth.png"
+    alt="Fondo derecho"
+    class="absolute right-0 top-0 w-full h-50 object-cover z-50"
+  />
         <h3
-          class="titulo max-w-3xl mb-5 font-bold tracking-wide tracking-tight leading-normal md:text-6xl dark:text-white animated-heading"
+          class="titulo max-w-3xl mb-5 font-bold tracking-wide tracking-tight leading-normal md:text-5xl dark:text-white animated-heading"
         >
           {{ $t("pages.landing.member.title") }}
         </h3>

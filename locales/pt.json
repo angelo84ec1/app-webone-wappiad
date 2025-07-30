@@ -2,7 +2,7 @@
   "pages": {
     "landing": {
       "hero": {
-        "firstTitle": "Desenvolvedores web, apps e plugins",
+        "firstTitle": "Desenvolvedores web, aplicativos e plugins com UI/UX",
         "secondTitle": "Soluções tecnológicas inovadoras",
         "thirdTitle": "Desenvolvedores digitais especializados",
         "firstDescription": "Programadores Full Stack Web com mais de 14 anos de experiência e 300 projetos web, apps, integrações desenvolvidos a nível nacional e internacional",
@@ -28,27 +28,28 @@
         }
       },
       "about": {
-        "description": "Cada desenvolvimento é especial e único, realizo com paixão para entregar um produto de qualidade"
+        "title": "Você quer que ajudemos você a desenvolver ?",
+        "description": "Contamos com uma grande equipe de profissionais em diversas tecnologias"
       },
       "member": {
-        "title": "Por que se tornar um Membro?",
-        "description": "Junte-se a mais de 4000 membros procurando empregos remotos em empresas globais com suporte de carreira personalizado.",
+        "title": "Temos conhecimento de uma variedade de ferramentas para Devs",
+        "description": "Especialistas em Backend, Frontend, UI/UX, Treinamento em IA, Cloud Architects, Devops e Full Stack e muito mais",
         "cards": [
           {
-            "title": "Crescimento de Carreira Estratégico",
-            "description": "Desbloqueie estratégias personalizadas para avançar na carreira de trabalho remoto."
+            "title": "Unimos suas ideias e geramos Mockups",
+            "description": "Chegaremos à sua ideia a partir de wireframes, mockups e protótipos"
           },
           {
-            "title": "Rede Global",
-            "description": "Conecte-se com empresas globais de alto nível e expanda sua rede profissional."
+            "title": "Nós criamos agentes de IA eficientes",
+            "description": "Temos especialistas em desenvolvimento de IA para levar sua ideia à escala."
           },
           {
-            "title": "Desenvolvimento de Habilidades",
-            "description": "Acesse recursos e treinamentos personalizados para aprimorar suas habilidades de trabalho remoto."
+            "title": "Trabalhamos de forma Híbrida",
+            "description": "Nossas ferramentas de comunicação são Slack, Trello, WhatsApp, Google Meet, Github e pessoalmente no Equador e no México."
           },
           {
             "title": "Suporte Completo",
-            "description": "Receba orientação de carreira completa dos especialistas da indústria."
+            "description": "Estamos abertos de segunda a sexta-feira, das 7h00 às 18h00 (GMT-5)"
           }
         ],
         "button": "Ver planos"
@@ -57,78 +58,194 @@
         "title": "Clientes Wappi",
         "description": "Desde 2009"
       },
+
+      "portafolio": {
+        "amc": "Portfólio de Sistemas Web, Aplicativos e Treinamento em IA",
+        "description": "Diversidade de linguagens de desenvolvimento"
+    
+      },
+
+      "example": {
+        "colmena": "Desenvolvimento e Integração Web",
+        "colmena2": "ERP",
+        "description": "Desenvolvimento de mockups de UI/UX, desenvolvimento de sites de comércio eletrônico, criação de APIs e integração de ERP do cliente. "
+    
+      },
+
+      "price": {
+        "colmena": "Solução Rango Valor:",
+        "time": "Tempo:",
+        "description": "30 - 90 días calendario"
+      },
+
+   
+
+      "example2": {
+        "amc2": "Desenvolvimento Web + IA + Integração ERP ",
+        "amc3": "Coris EC",
+        "description": "Desenvolvimento de mockup de UI/UX, desenvolvimento de web para comércio eletrônico, criação de API e integração com o ERP Coris Ecuador para assistência. "
+    
+      },
+
+      "price2": {
+        "amc4": "Solução Rango Valor:",
+        "time": "Tempo:",
+        "description": "30 - 90 dias do calendário"
+      },
+
+      "example3": {
+        "lexcob": "Tarefas de desenvolvimento de CRM e",
+        "lexcob1": "Subtarefas",
+        "description": "Desenvolvimento e criação de mockups para módulos de usuário, tarefas e subtarefas, importação de informações de modelos CSV, notificações por e-mail para tarefas concluídas, download de relatórios de status de tarefas CSV e um desktop com gráficos de porcentagem."
+    
+      },
+
+      "price3": {
+        "lexcob2": "Solução Rango Valor:",
+        "time": "Tempo:",
+        "description": "80 - 240 dias do calendário"
+      },
+
+      "example4": {
+        "imvab": "Integração da API Woocommerce com Sap Business",
+        "imvab1": "One",
+        "description": "Desenvolvimento de script para integrar produtos WooCommerce no SAP Business One de maneira bidirecional com campos de código, preço, imagem, imposto e estoque."
+    
+      },
+
+      "price4": {
+        "imvab2": "Solução Rango Valor:",
+        "time": "Tempo:",
+        "description": "30 - 90 do calendário"
+      },
+
+
+      "example5": {
+        "igo": "Criação de Mockups, protótipos, desenvolvimento de aplicativos Android e",
+        "igo1": "IOS",
+        "description": "Desenvolvimento de aplicativo móvel para encontrar associados em diversas profissões, classificação de taxa de aceitação de currículos usando APIs ChatGpt, Lambda e Firbase, e mobilização de associados na Igo Cars."
+    
+      },
+
+      "price5": {
+        "igo2": "Solução Rango Valor:",
+        "time": "Tempo:",
+        "description": "290 - 366 do calendário"
+      },
+
+      "example6": {
+        "lino": "Criação de Mockups, protótipos, desenvolvimento de aplicativos Android e",
+        "lino1": "iOS e Web",
+        "description": "Desenvolvimento de uma aplicação móvel e web para publicação de serviços imobiliários e profissionais"
+    
+      },
+
+      "price6": {
+        "lino2": "Solução Rango Valor:",
+        "time": "Tempo:",
+        "description": "90 - 120 do calendário"
+      },
+
+      "example7": {
+        "wafidely": "Creación Mockups, prototipo, desarrollo web ",
+        "wafidely1": "SAAS",
+        "description": "Desenvolvimento de sistema web SaaS para agendamento de consultas, criação automática de landing pages, bot para WhatsApp, Facebook e Instagram com IA LLM "
+    
+      },
+
+      "price7": {
+        "wafidely2": "Rango Valor Solución:",
+        "time": "Tiempo:",
+        "description": "120 - 180 días calendario"
+      },
+
+
+
+      "procesos": {
+        "wappiad": "Metodologia Agile Scrum em cada projeto",
+        "description": "Metodologia Agile Scrum em cada projeto"
+    
+      },
+
+      "versiculo": {
+        "mateo": "Se você pode crer, todas as coisas são possíveis ao que crê.",
+        "description": "Se você pode crer, todas as coisas são possíveis ao que crê."
+    
+      },
+
+
       "faq": {
-        "title": "Não fique com dúvidas.",
-        "description": "Não fique com dúvidas.",
+        "title": "Não fique com dúvidas",
+        "description": "Caso tenha outras preocupações, agende uma consulta.",
         "subscription_validity": {
-          "question": "Quanto tempo é válido o plano?",
-          "answer": "Cada plano é válido por 1 ano. Você pode acessar seu sistema e o pacote de envio de WhatsApp é válido enquanto você tem créditos disponíveis."
+          "question": "Tenho uma ideia exclusiva para desenvolver, é possível que seja confidencial?",
+          "answer": "Sim, mantemos estrita confidencialidade das ideias dos nossos clientes, assinamos documentos de confidencialidade"
         },
         "what_is_wafidely": {
-          "question": "O que é Wafidely?",
-          "answer": "É uma startup criada e apoiada por desenvolvedores Full Stack do México, Paquistão e Equador para ajudar empresas a interagir com seus clientes por meio de respostas automatizadas via WhatsApp, fornecendo estatísticas para agendamentos ou confirmações de eventos."
+          "question": "Você consegue fazer desenvolvimento complexo de web, aplicativos e IA?",
+          "answer": "Sim, foram realizados desenvolvimentos de alta complexidade, contamos com uma equipe de especialistas em tecnologia de ponta"
         },
         "uses_ai": {
-          "question": "A aplicação utiliza inteligência artificial?",
-          "answer": "Sim, usamos IA para automatizar processos, aproveitando várias ferramentas de IA fornecidas pela AWS."
+          "question": "Você está atualizado sobre a implementação e integração da Inteligência Artificial?",
+          "answer": "Sim, desenvolvemos sistemas integrados com IA há mais de 2 anos. É preciso fazer uma análise para determinar como cada projeto pode se beneficiar e qual ferramenta é ideal entre as diversas existentes, que atualmente não são apenas o ChatGPT."
         },
         "use_my_business_whatsapp_number": {
-          "question": "Posso usar meu número de WhatsApp comercial?",
-          "answer": "Sim, você pode usar quando selecionar o plano personalizado. O processo para ativar seu número pode durar entre 30 e 90 dias."
+          "question": "Você pode integrar sistemas robustos do tipo Erps, como o SAP Business One?",
+          "answer": "Sim, 2 especialistas em desenvolvimento de complementos SAP Business One, integramos desenvolvimentos personalizados, CMS como Woocommerce e Shopify"
         },
         "landing_page_for_marketing_campaigns": {
-          "question": "Posso ter uma página de destino para minhas campanhas de marketing digital?",
-          "answer": "Quando você criar sua conta na nossa plataforma, o sistema pedirá que você preencha seus dados comerciais ou de evento para gerar uma URL, que pode ser usada para fins comerciais ou para agendamento de consultas."
+          "question": "Você tem planos de financiamento?",
+          "answer": "Depende do valor e do tempo de desenvolvimento; se ultrapassar 50 mil, podemos fazer em 3 ou 4 parcelas."
         },
         "whatsapp_notifications_number": {
-          "question": "A partir de qual número de WhatsApp as notificações serão enviadas para meus clientes?",
-          "answer": "As notificações são enviadas a partir de um número de WhatsApp aprovado pela Meta para enviar notificações. Este número é usado para todas as contas e exibe o logotipo de Wafidely ou Wimtut e seu nome."
-        },
-        "start_sending_appointments_reminders": {
-          "question": "Quando posso começar a enviar lembretes de agendamentos ou confirmações?",
-          "answer": "Você pode começar a enviar lembretes assim que se registrar na plataforma com o pagamento correspondente. Você pode enviar um arquivo no formato Excel ou CSV para importar seus dados de acordo com o plano de assinatura. O sistema conta os registros e só envia até 2000. Se você tiver mais registros, você precisa entrar em contato com o suporte."
+          "question": "Vocês têm escritórios físicos?",
+          "answer": "Sim, estamos no setor norte da cidade de Quito, Equador."
         }
+        
       }
     },
     "planes": {
-      "title": "Planos",
+      "title": "Serviços",
       "button": "Comece agora",
       "time": "ano",
       "subscriptions": [
         {
-          "name": "WaPyme",
+          "name": "Desenvolver Web à medida",
+          "time": "uma única vez",
           "details": [
-            "Anuais ou até que as 250 mensagens automáticas do WhatsApp sejam utilizadas"
+           "Utilizamos React, Vue ou Angular para Frontend, Next, Lavarel, Firbase para Backend"
           ],
           "benefits": [
-            "Lembretes automáticos de compromissos no WhatsApp até 250",
-            "Código QR do estabelecimento",
-            "Página de destino com agendamento de compromissos no calendário",
-            "Relatório de compromissos confirmados e cancelados"
+           "Desenvolvimento de Mockups de acordo com sua imagem corporativa e de referência",
+           "Melhor desempenho do seu aplicativo ou aplicação web",
+           "Escalável para atingir um grande número de usuários",
+           "Hospedagem ou desenvolvimento em um servidor dedicado AWS ou Google Cloud" 
           ]
         },
         {
-          "name": "WaMedium",
+          "name": "Desenvolvimento de Aplicativos",
+          "time": "uma única vez",
           "details": [
-            "Anuais ou até que as 500 mensagens automáticas do WhatsApp sejam utilizadas"
+           "Frontend React Native, Next, Lavarel, Firmbase para Backend"
           ],
           "benefits": [
-            "Lembretes automáticos de compromissos no WhatsApp até 500",
-            "Código QR do estabelecimento",
-            "Página de destino com agendamento de compromissos no calendário",
-            "Relatório de compromissos confirmados e cancelados"
+           "Desenvolvimento de wireframes, mockups e protótipos personalizados de acordo com a imagem corporativa e suas referências",
+           "Para Android e iOS",
+           "Especialistas em desenvolvimento de aplicativos desenvolveram mais de 300",
+           "Informações relevantes sobre o aplicativo serão refletidas no ambiente web"
           ]
         },
         {
-          "name": "WaLarge",
+          "name": "Treinamento de Agente de IA",
+          "time": "por mês",
           "details": [
-            "Anuais ou até que as 1000 mensagens automáticas do WhatsApp sejam utilizadas"
+            "N8N - API do WhatsApp - Strapi - Langchain - Wafidely"
           ],
           "benefits": [
-            "Lembretes automáticos de compromissos no WhatsApp até 1000",
-            "Código QR do estabelecimento",
-            "Página de destino com agendamento de compromissos no calendário",
-            "Relatório de compromissos confirmados e cancelados"
+          "Automatizamos tarefas repetitivas",
+          "Trabalhamos com diferentes plataformas e as integramos por meio de APIs REST",
+          "Usamos tecnologia especializada para cada solução, por exemplo, para transcrição de áudio personalizada (ElevanLabs), Agenda de Compromissos (Google Agenda)",
+          "Otimize seu tempo e concentre-se no que torna seu dia a dia mais produtivo"
           ]
         }
       ]
@@ -137,24 +254,25 @@
   "layout": {
     "header": {
       "start": "Início",
-      "pricing": "Preços",
+      "pricing": "Serviços",
+      "contact": "Contato",
       "successCases": "Casos de Sucesso",
       "register": "Registrar",
       "login": "Entrar"
     },
     "footer": {
-      "call_to_action": "Comece a usar Wafidely agora!",
-      "description": "Sistema web intuitivo fácil de usar, com novas versões inovadoras a cada 6 meses.",
-      "register_button": "REGISTRARSE",
+      "call_to_action": "Resolva ou crie agora conosco!",
+      "description": "Especialistas multilíngues em Full Stack e IA com pelo menos 3 anos de experiência",
+      "register_button": "AGENDAR REUNIÃO",
       "company_info": {
         "title": "Wafidely",
-        "description": "Permite enviar recordatorios automáticos a WhatsApp y recibir respuestas directamente en WhatsApp. La respuesta se almacena en el administrador de Wafidely."
+        "description": "Inteligência de Aplicativos Web e Dados Artificiais - Devops à sua disposição para solucionar ou criar desenvolvimentos de aplicativos e web internacionalmente."
       },
       "plans": {
-        "title": "Planos",
-        "waPyme": "WaPyme",
-        "waMedium": "WaMedium",
-        "waLarge": "WaLarge"
+        "title": "Serviços",
+        "waPyme": "Desenvolvimento Web",
+        "waMedium": "Desenvolvimento de aplicativos móveis",
+        "waLarge": "Treinamento de IA"
       },
       "info": {
         "title": "Informação",
@@ -169,7 +287,7 @@
       }
     },
     "footer_bottom": {
-      "copyright": "© 2024 Copyright WAPPIAD S.A.S. Todos os direitos reservados"
+      "copyright": "© 2025 Copyright WAPPIAD S.A.S. Todos os direitos reservados"
     }
   }
 }

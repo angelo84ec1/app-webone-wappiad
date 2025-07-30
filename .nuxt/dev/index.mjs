@@ -3,26 +3,26 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/h3/dist/index.mjs';
-import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { stringify, uneval } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/devalue/index.js';
-import destr from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/destr/dist/index.mjs';
-import { hash } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/ohash/dist/index.mjs';
-import { renderSSRHead } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/@unhead/ssr/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/ofetch/dist/node.mjs';
-import { createCall, createFetch } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/hookable/dist/index.mjs';
-import { klona } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/klona/dist/index.mjs';
-import { snakeCase } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/scule/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/h3/dist/index.mjs';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/devalue/index.js';
+import destr from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/destr/dist/index.mjs';
+import { hash } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/ohash/dist/index.mjs';
+import { renderSSRHead } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/@unhead/ssr/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/ofetch/dist/node.mjs';
+import { createCall, createFetch } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/hookable/dist/index.mjs';
+import { klona } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/klona/dist/index.mjs';
+import { snakeCase } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/scule/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/radix3/dist/index.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { consola } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/consola/dist/index.mjs';
-import { getContext } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/unctx/dist/index.mjs';
-import { version, unref } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/vue/index.mjs';
-import { createServerHead as createServerHead$1 } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/node_modules/@unhead/shared/dist/index.mjs';
+import { consola } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/consola/dist/index.mjs';
+import { getContext } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/unctx/dist/index.mjs';
+import { version, unref } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/vue/index.mjs';
+import { createServerHead as createServerHead$1 } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin } from 'file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/node_modules/@unhead/shared/dist/index.mjs';
 
 const r=Object.create(null),i=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return i()[o]??r[o]},has(e,o){const E=i();return o in E||o in r},set(e,o,E){const b=i(!0);return b[o]=E,!0},deleteProperty(e,o){if(!o)return !1;const E=i(!0);return delete E[o],!0},ownKeys(){const e=i(!0);return Object.keys(e)}}),t=typeof process<"u"&&process.env&&"development"||"",B=[["APPVEYOR"],["AWS_AMPLIFY","AWS_APP_ID",{ci:!0}],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"],["ZEABUR"],["CODESPHERE","CODESPHERE_APP_ID",{ci:!0}],["RAILWAY","RAILWAY_PROJECT_ID"],["RAILWAY","RAILWAY_SERVICE_ID"],["DENO-DEPLOY","DENO_DEPLOYMENT_ID"],["FIREBASE_APP_HOSTING","FIREBASE_APP_HOSTING",{ci:!0}]];function p(){if(globalThis.process?.env)for(const e of B){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const l=p(),d=l.name;function n(e){return e?e!=="false":!1}const I=globalThis.process?.platform||"",T=n(s.CI)||l.ci!==!1,R=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const A=t==="test"||n(s.TEST);n(s.MINIMAL)||T||A||!R;const _=/^win/i.test(I);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||(R||_)&&s.TERM!=="dumb"||T);const C=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(C?.split(".")[0])||null;const y=globalThis.process||Object.create(null),c={versions:{}};new Proxy(y,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in c)return c[o]}});const L=globalThis.process?.release?.name==="node",a=!!globalThis.Bun||!!globalThis.process?.versions?.bun,D=!!globalThis.Deno,O=!!globalThis.fastly,S=!!globalThis.Netlify,N=!!globalThis.EdgeRuntime,P=globalThis.navigator?.userAgent==="Cloudflare-Workers",F=[[S,"netlify"],[N,"edge-light"],[P,"workerd"],[O,"fastly"],[D,"deno"],[a,"bun"],[L,"node"]];function G(){const e=F.find(o=>o[0]);if(e)return {name:e[1]}}const u=G();u?.name||"";
 
@@ -484,7 +484,7 @@ function stringifyParsedURL(parsed) {
   return proto + auth + host + pathname + search + hash;
 }
 
-const serverAssets = [{"baseName":"server","dir":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/server/assets"}];
 
 const assets = createStorage();
 
@@ -496,11 +496,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/.data/kv","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/.data/kv","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -947,16 +947,16 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _mlmDBsbnnz = (function(nitro) {
+const _bTGQPHlW8I = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front";
+const rootDir = "/Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front";
 
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _iarNN7Qn4r = (nitroApp) => {
+const _4XQ9OOwnFX = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1022,8 +1022,8 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _mlmDBsbnnz,
-_iarNN7Qn4r
+  _bTGQPHlW8I,
+_4XQ9OOwnFX
 ];
 
 const scheduledTasks = false;
@@ -1153,13 +1153,13 @@ const errorHandler = (async function errorhandler(error, event) {
   return send(event, html);
 });
 
-const _lazy_bMDHYh = () => Promise.resolve().then(function () { return login_get$1; });
-const _lazy_UfFHzj = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_aGiVZr = () => Promise.resolve().then(function () { return login_get$1; });
+const _lazy_tAIdDz = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/api/login', handler: _lazy_bMDHYh, lazy: true, middleware: false, method: "get" },
-  { route: '/__nuxt_error', handler: _lazy_UfFHzj, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_UfFHzj, lazy: true, middleware: false, method: undefined }
+  { route: '/api/login', handler: _lazy_aGiVZr, lazy: true, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_tAIdDz, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_tAIdDz, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1432,7 +1432,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Sistema de agendamiento de citas vía web y WhatsApp. Facilita la gestión de citas y mejora la comunicación con tus clientes."},{"name":"format-detection","content":"telephone=no"},{"name":"keywords","content":"agendamiento de citas, sistema de citas medicas en whatsapp, gestión de citas en whatsapp, citas web, citas whatsapp, Wafidely"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"}],"style":[],"script":[{"src":"https://www.paypal.com/sdk/js?client-id=test&currency=USD","async":true}],"noscript":[],"title":"WAPPIAD S.A.S. Web - App - Inteligencia Artifical - Digital ","htmlAttrs":{"lang":"es"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Desarrollo de web a la medida - Desarrollo de Apps - Entrenamiento de Agentes IA - Programadores Full Stack - Desarrollo Sistemas SAAS - Arquitectos de Cloud."},{"name":"format-detection","content":"telephone=no"},{"name":"keywords","content":"Desarrollo web - Desarrollo apps- Dntrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"}],"style":[],"script":[{"src":"https://www.paypal.com/sdk/js?client-id=test&currency=USD","async":true}],"noscript":[],"title":"WAPPIAD S.A.S. Web - App - Inteligencia Artifical - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI","htmlAttrs":{"lang":"es"}};
 
 const appRootId = "__nuxt";
 
@@ -1456,7 +1456,7 @@ function publicAssetsURL(...path) {
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/site_wappiad_front/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file:///Users/angeloluna/Documents/WAPPIADSAS/appwappiad/app-web-wappiad-front/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();

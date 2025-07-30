@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#232c4d] mt-0 overflow-hidden pb-[5%] px-[32px]">
+  <section class="bg-[#232c4d] mt-0 overflow-hidden pb-[5%] px-[32px] pl-[70px]">
     <div class="landing-cont !py-12 flex flex-col lg:flex-row items-center">
       <!-- Left Content -->
       <div
@@ -22,7 +22,7 @@
             </p>
 
             <h1
-              class="titulo max-w-3xl mb-5 font-bold tracking-wide tracking-tight leading-normal md:text-6xl dark:text-white animated-heading"
+              class="titulo max-w-3xl mb-5 font-bold tracking-wide tracking-tight leading-normal md:text-5xl dark:text-white animated-heading pb-2"
               aria-live="polite"
             >
               {{ t(titles[currentIndex]) }}
