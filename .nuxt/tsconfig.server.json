@@ -130,7 +130,6 @@
     "./types/nitro-nuxt.d.ts",
     "../node_modules/@pinia/nuxt/runtime/server",
     "../node_modules/@sidebase/nuxt-pdf/runtime/server",
-    "../node_modules/nuxt-proxy/runtime/server",
     "../node_modules/@nuxtjs/i18n/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",

@@ -13,6 +13,13 @@ export default defineNuxtConfig({
   },
 
   ssr: false,
+  
+  // 🔧 CONFIGURACIÓN DE PUERTO PARA WAPPIAD
+  nitro: {
+    port: 3001,
+    host: '0.0.0.0'
+  },
+
   app: {
     head: {
       title: "WAPPIAD S.A.S. Web - App - Inteligencia Artifical - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI",
@@ -61,6 +68,7 @@ export default defineNuxtConfig({
       GOOGLE_MAPS_API: "AIzaSyAMQ-DzRcCKRrOWJWjPkPSTUHqwyQkyVH8",
     },
   },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "~/assets/css/reset.css",
@@ -68,6 +76,7 @@ export default defineNuxtConfig({
     "~/assets/css/main.css",
     "~/assets/scss/_swiper.scss",
   ],
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -80,13 +89,34 @@ export default defineNuxtConfig({
     // "~/plugins/pinia-persist.client.ts",
     // "@/plugins/vue-google-map.client.ts",
   ],
+
   components: true,
-  modules: ["@pinia/nuxt", "@sidebase/nuxt-pdf", "nuxt-proxy", "@nuxtjs/i18n"],
+
+  // 🚨 MÓDULOS - SE REMOVIÓ "nuxt-proxy" TEMPORAL
+  modules: [
+    "@pinia/nuxt", 
+    "@sidebase/nuxt-pdf", 
+    // "nuxt-proxy", // ❌ COMENTADO TEMPORALMENTE
+    "@nuxtjs/i18n"
+  ],
+
+  // 🔧 CONFIGURACIÓN DE PROXY (si la necesitas más adelante)
+  // proxy: {
+  //   '/api/': {
+  //     target: 'http://localhost:8080', // Tu servidor API
+  //     changeOrigin: true,
+  //     pathRewrite: {
+  //       '^/api/': '/api/'
+  //     }
+  //   }
+  // },
 
   swiper: {},
+
   build: {
     transpile: ["defu"],
   },
+
   i18n: {
     vueI18n: "./i18n.config.ts",
   },

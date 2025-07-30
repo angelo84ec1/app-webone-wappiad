@@ -197,9 +197,6 @@ const _inlineRuntimeConfig = {
       },
       "multiDomainLocales": false
     }
-  },
-  "proxy": {
-    "options": []
   }
 };
 const envOptions = {
