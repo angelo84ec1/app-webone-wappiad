@@ -10,10 +10,10 @@
   
 Términos y condiciones</div>
 
-  <div class="flex flex-wrap" style="padding-left: 15px; padding-right: 18px;">
+  <div class="flex flex-wrap" style="padding-left: 30px; padding-right: 18px;">
       
-    <div class="p-6 space-y-5">
-    <section class="  p-3 my-10">
+    <div class="p-2 space-y-1">
+    <section class=" ">
       <h2 class="text-lg font-bold mb-2">Responsabilidad</h2>
   <div class="text-gray-700 ">
     <li> Wappiad SAS se compromete a cumplir con cada etapa del desarrollo acordado según los requerimientos del cliente.</li>
@@ -32,7 +32,7 @@ Términos y condiciones</div>
 <p>
   Sus datos personales serán almacenados durante el tiempo necesario para el cumplimiento de las finalidades mencionadas.
   Cada 2 años se realizará una revisión sobre la pertinencia de su conservación.
-  En caso de no existir una necesidad empresarial legítima, Auto Motors Club podrá anonimizar o eliminar dichos datos conforme lo establece la ley.
+ 
 </p>
 </div>
 
@@ -40,13 +40,13 @@ Términos y condiciones</div>
 <div>
 <h2 class="text-lg font-bold mb-2">Acceso y transferencia</h2>
 <p>
-  Auto Motors Club no venderá ni divulgará su información personal a terceros, salvo:
+ Wappiad SAS no venderá ni divulgará su información personal a terceros, salvo:
 </p>
 <ul class="list-disc list-inside mt-2">
   <li>En cumplimiento de obligaciones contractuales o legales.</li>
   <li>
     En el caso de alianzas con empresas relacionadas directamente con la prestación de nuestros servicios
-    (como aseguradoras, talleres afiliados o asistencia técnica), previa garantía de cumplimiento de la LOPDP.
+
   </li>
 </ul>
 </div>

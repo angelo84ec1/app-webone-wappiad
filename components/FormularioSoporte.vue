@@ -48,48 +48,7 @@
       </div>
 
 
-        <!-- Select # Trabajadores -->
-        <div class="form-group mb-6 relative">
-        <select 
-          v-model="formData.trabajadores" 
-          id="trabajadores" 
-          name="trabajadores" 
-          class="form-select peer w-full px-4 py-2 bg-transparent border-0 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-500 transition-colors duration-300 appearance-none cursor-pointer"
-          @focus="setFocusField('Trabajadores')"
-          @blur="removeFocusField('Trabajadores')"
-        >
-          <option value="" disabled selected hidden></option>
-          <option value="1-10">1 - 10</option>
-          <option value="+10">+10</option>
-          <option value="+20">+20</option>
-          <option value="+30">+30</option>
-          <option value="+40">+40</option>
-          <option value="+50">+50</option>
-          <option value="+100">+100</option>
-          <option value="+500">+500</option>
-          <option value="+1000">+1000</option>
-          <option value="+5000">+5000</option>
-          <option value="+10000">+10000</option>
-          <option value="+100000">+100000</option>
-          <option value="+1000000<">+1000000</option>
-
-        </select>
-        <label 
-          for="pais" 
-          class="form-label absolute left-4 -top-2.5 text-gray-600 text-sm transition-all duration-300 transform peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#232c4d]"
-          :class="formData.trabajadores? 'text-sm -top-2.5 text-blue-500' : 'text-base text-gray-400 top-3'"
-        >
-
-        
-          No. Trabajadores
-        </label>
-        <!-- Icono de flecha personalizada -->
-        <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </div>
+       
 
       <!-- Campo Teléfono -->
       <div class="form-group mb-6 relative">
@@ -183,23 +142,16 @@
           @blur="removeFocusField('Presupuesto')"
         >
           <option value="" disabled selected hidden></option>
-          <option value="$499">$499</option>
-          <option value="$999">$999</option>
-          <option value="$1999">$1999</option>
-          <option value="$2999">$2999</option>
-          <option value="$3999">$3999</option>
-          <option value="$4999">$4999</option>
-          <option value="$7999">$7999</option>
-          <option value="$9999">$9999</option>
-          <option value="$19999">$19999</option>
-          <option value="$29999">$29999</option>
-          <option value="$3999">$39999</option>
-          <option value="$49999">$49999</option>
-          <option value="+$50k">+$50k</option>
-          <option value="+$100k">+$100k</option>
-          <option value="+$200k">+$200k</option>
-          <option value="+$500k">+$500k</option>
-          <option value="+$1M">+$1M</option>
+          <option value="$499">$499 - $999</option>
+          <option value="$999">$999 - $4999</option>
+          <option value="$1999">$4999- $9999</option>
+          <option value="$2999">$9999 - $19999</option>
+          <option value="$3999">$19999 - $49999</option>
+          <option value="$4999">$49999 - $99999</option>
+          <option value="$7999">$99999 - $499999</option>
+          <option value="$9999">$499999 - $1M</option>
+          <option value="$19999">+$1M</option>
+yar
         </select>
         <label 
           for="presupuesto" 
@@ -317,7 +269,6 @@ export default {
       formData: {
         nombre: '',
         empresa: '',
-        trabajadores: '',
         telefono: '',
         correo: '',
         servicio: '',
@@ -335,7 +286,6 @@ export default {
       if (
         !this.formData.nombre.trim() ||
         !this.formData.empresa.trim() ||
-        !this.formData.trabajadores.trim() ||
         !this.formData.telefono.trim() ||
         !this.formData.correo.trim() ||
         !this.formData.servicio.trim() ||
@@ -354,7 +304,6 @@ export default {
         text: `
           Nombre persona: ${this.formData.nombre}
           Empresa: ${this.formData.empresa}
-          Trabajadores: ${this.formData.trabajadores}
           Whatsapp: ${this.formData.telefono}
           Correo: ${this.formData.correo}
           Servicio: ${this.formData.servicio}
@@ -378,7 +327,6 @@ export default {
             this.formData = {
               nombre: '',
               empresa: '',
-              trabajadores: '',
               telefono: '',
               correo: '',
               servicio: '',
