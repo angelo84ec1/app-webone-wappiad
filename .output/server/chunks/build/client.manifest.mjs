@@ -1,42 +1,20 @@
 const client_manifest = {
-  "_!~{00g}~.js": {
+  "_!~{00e}~.js": {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
     "file": "footer.3e8bVMkU.css",
-    "src": "_!~{00g}~.js"
+    "src": "_!~{00e}~.js"
   },
-  "_BOCpb-ck.js": {
+  "_-Qsh_XCc.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BOCpb-ck.js",
-    "name": "vue.f36acd1f",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "_CYcV-Ke_.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "CYcV-Ke_.js",
-    "name": "nuxt-link",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "_rSroKLDk.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "rSroKLDk.js",
+    "file": "-Qsh_XCc.js",
     "name": "footer",
     "imports": [
-      "_CYcV-Ke_.js",
+      "_BezyZS_q.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
@@ -64,6 +42,17 @@ const client_manifest = {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/png"
+  },
+  "_BezyZS_q.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BezyZS_q.js",
+    "name": "nuxt-link",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
   },
   "assets/images/Mask group.png": {
     "resourceType": "image",
@@ -146,7 +135,7 @@ const client_manifest = {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/png",
-    "file": "landing-1.Bu18zdLt.png",
+    "file": "landing-1.fhouh9z2.png",
     "src": "assets/images/landing-1.png"
   },
   "assets/images/landing-2.png": {
@@ -259,7 +248,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CyI0lEfQ.js",
+    "file": "h128WOHA.js",
     "name": "i18n.config",
     "src": "i18n.config.ts?hash=bffaebcb&config=1",
     "isDynamicEntry": true
@@ -269,7 +258,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BrURXcFJ.js",
+    "file": "CiW2F0W1.js",
     "name": "default",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
@@ -282,7 +271,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DEiGkV43.js",
+    "file": "BLLg3ygU.js",
     "name": "auth",
     "src": "middleware/auth.ts",
     "isDynamicEntry": true,
@@ -295,13 +284,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ELAKzQIS.js",
+    "file": "DPZ7wDG8.js",
     "name": "error-404",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CYcV-Ke_.js",
-      "_BOCpb-ck.js",
+      "_BezyZS_q.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
@@ -319,12 +307,11 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "B2Jlj63u.js",
+    "file": "DJ-ADSd-.js",
     "name": "error-500",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_BOCpb-ck.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
@@ -342,7 +329,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CapJEXHA.js",
+    "file": "BJBTe135.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -354,11 +341,11 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
     "css": [
-      "entry.lAvBC_Yr.css"
+      "entry.BCQWwz_I.css"
     ]
   },
-  "entry.lAvBC_Yr.css": {
-    "file": "entry.lAvBC_Yr.css",
+  "entry.BCQWwz_I.css": {
+    "file": "entry.BCQWwz_I.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -368,14 +355,14 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "tW8o0jYz.js",
+    "file": "DmuYUvsL.js",
     "name": "chatbotconinteligenciaartificial",
     "src": "pages/chatbotconinteligenciaartificial.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_rSroKLDk.js",
+      "_-Qsh_XCc.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CYcV-Ke_.js"
+      "_BezyZS_q.js"
     ],
     "css": [
       "chatbotconinteligenciaartificial.CHnW7EXK.css"
@@ -401,24 +388,24 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "C6b4Yew4.js",
+    "file": "CwgPDvEa.js",
     "name": "contacto",
     "src": "pages/contacto.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_rSroKLDk.js",
+      "_-Qsh_XCc.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CYcV-Ke_.js"
+      "_BezyZS_q.js"
     ],
     "css": [
-      "contacto.C53-ylx_.css"
+      "contacto.DI-KRqXU.css"
     ],
     "assets": [
       "banner_soporte.dDA591dn.jpg"
     ]
   },
-  "contacto.C53-ylx_.css": {
-    "file": "contacto.C53-ylx_.css",
+  "contacto.DI-KRqXU.css": {
+    "file": "contacto.DI-KRqXU.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -434,14 +421,14 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DYfqjxxm.js",
+    "file": "Ch8zGKJt.js",
     "name": "home",
     "src": "pages/home.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_rSroKLDk.js",
+      "_-Qsh_XCc.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CYcV-Ke_.js"
+      "_BezyZS_q.js"
     ],
     "css": [
       "home.tRGzxuNW.css"
@@ -466,7 +453,7 @@ const client_manifest = {
       "moneda-digital.BiqfbW7E.png",
       "globo.BeBl3W-g.png",
       "apoyo.BM5a1FB4.png",
-      "landing-1.Bu18zdLt.png",
+      "landing-1.fhouh9z2.png",
       "landing-2.B5LUyGsV.png",
       "landing-3.CQNbbghf.png",
       "background-mateo.DQQf3G1L.png"
@@ -592,8 +579,8 @@ const client_manifest = {
     "prefetch": true,
     "mimeType": "image/png"
   },
-  "landing-1.Bu18zdLt.png": {
-    "file": "landing-1.Bu18zdLt.png",
+  "landing-1.fhouh9z2.png": {
+    "file": "landing-1.fhouh9z2.png",
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/png"
@@ -621,7 +608,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "OpYs006I.js",
+    "file": "DJHB1ind.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
@@ -629,43 +616,19 @@ const client_manifest = {
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "pages/nosotros.vue": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "Xg7dumi4.js",
-    "name": "nosotros",
-    "src": "pages/nosotros.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "_rSroKLDk.js",
-      "node_modules/nuxt/dist/app/entry.js",
-      "_CYcV-Ke_.js"
-    ],
-    "css": [
-      "nosotros.DGM3PQHm.css"
-    ]
-  },
-  "nosotros.DGM3PQHm.css": {
-    "file": "nosotros.DGM3PQHm.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
-  },
   "pages/servicios.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BYy3irX6.js",
+    "file": "CU8w5TA6.js",
     "name": "servicios",
     "src": "pages/servicios.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_rSroKLDk.js",
+      "_-Qsh_XCc.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CYcV-Ke_.js"
+      "_BezyZS_q.js"
     ],
     "css": [
       "servicios.BSYhYF37.css"
@@ -682,14 +645,14 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BPnPej81.js",
+    "file": "Bapg1z6Q.js",
     "name": "terminosycondiciones",
     "src": "pages/terminosycondiciones.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_rSroKLDk.js",
+      "_-Qsh_XCc.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_CYcV-Ke_.js"
+      "_BezyZS_q.js"
     ],
     "css": [
       "terminosycondiciones.DUKYQE5J.css"

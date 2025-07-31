@@ -65,6 +65,7 @@ export default defineNuxtConfig({
       baseURL: process.env.STRAPI_URL || "http://localhost:1337",
       MAILTO: process.env.MAILTO || "websecuador.net@gmail.com",
       pagomedioToken: process.env.PAGOMEDIO_TOKEN,
+      gtmContainerId: process.env.NUXT_PUBLIC_GTM_CONTAINER_ID, // set NUXT_PUBLIC_GTM_CONTAINER_ID in .env file
       GOOGLE_MAPS_API: "AIzaSyAMQ-DzRcCKRrOWJWjPkPSTUHqwyQkyVH8",
     },
   },
@@ -98,6 +99,10 @@ export default defineNuxtConfig({
     "@sidebase/nuxt-pdf", 
     // "nuxt-proxy", // ❌ COMENTADO TEMPORALMENTE
     "@nuxtjs/i18n"
+   
+
+
+
   ],
 
   // 🔧 CONFIGURACIÓN DE PROXY (si la necesitas más adelante)
@@ -120,6 +125,7 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: "./i18n.config.ts",
   },
+
 
   carousel: {
     prefix: "MyPrefix",
