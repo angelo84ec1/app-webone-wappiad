@@ -14,7 +14,7 @@
       <textarea v-model="formData.requerimiento" id="requerimiento" name="requerimiento"
         class="w-full mb-4 p-2 rounded-md"></textarea>
 
-      <button type="submit" class="estil1 bg-[#FFF200]   rounded-md">Enviar</button>
+      <button type="submit" class="estil1 bg-[#232c4d]  rounded-md">Enviar</button>
     </form>
   </div>
 </template>

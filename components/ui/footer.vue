@@ -9,11 +9,17 @@
       <br />
       <span class="text-lg">{{ $t("layout.footer.description") }}</span>
     </p>
+    <a
+  href="https://wafidely.com/aiembudo/688d2e1b1ba36e68f0bae809"
+  target="_blank"
+  rel="noopener"
+>
     <button
   class="px-5 py-3 sm:py-1 text-sm sm:text-base font-medium text-slate-700 shadow-xl hover:bg-white duration-150 rounded-lg bg-[#9dfa2b]"
 >
   {{ $t("layout.footer.register_button") }}
 </button>
+</a>
   </div>
 
   <footer
