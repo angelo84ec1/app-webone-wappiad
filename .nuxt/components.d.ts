@@ -2,6 +2,7 @@
 interface _GlobalComponents {
       'CompanyCard': typeof import("../components/CompanyCard.vue")['default']
     'CountdownTimer': typeof import("../components/CountdownTimer.vue")['default']
+    'Error404': typeof import("../components/Error404.vue")['default']
     'FormularioColumna': typeof import("../components/FormularioColumna.vue")['default']
     'FormularioColumnaLanding': typeof import("../components/FormularioColumnaLanding.vue")['default']
     'FormularioColumnaModificaPlanes': typeof import("../components/FormularioColumnaModificaPlanes.vue")['default']
@@ -72,6 +73,7 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
       'LazyCompanyCard': typeof import("../components/CompanyCard.vue")['default']
     'LazyCountdownTimer': typeof import("../components/CountdownTimer.vue")['default']
+    'LazyError404': typeof import("../components/Error404.vue")['default']
     'LazyFormularioColumna': typeof import("../components/FormularioColumna.vue")['default']
     'LazyFormularioColumnaLanding': typeof import("../components/FormularioColumnaLanding.vue")['default']
     'LazyFormularioColumnaModificaPlanes': typeof import("../components/FormularioColumnaModificaPlanes.vue")['default']
@@ -156,6 +158,7 @@ declare module 'vue' {
 
 export const CompanyCard: typeof import("../components/CompanyCard.vue")['default']
 export const CountdownTimer: typeof import("../components/CountdownTimer.vue")['default']
+export const Error404: typeof import("../components/Error404.vue")['default']
 export const FormularioColumna: typeof import("../components/FormularioColumna.vue")['default']
 export const FormularioColumnaLanding: typeof import("../components/FormularioColumnaLanding.vue")['default']
 export const FormularioColumnaModificaPlanes: typeof import("../components/FormularioColumnaModificaPlanes.vue")['default']
@@ -226,6 +229,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyCompanyCard: typeof import("../components/CompanyCard.vue")['default']
 export const LazyCountdownTimer: typeof import("../components/CountdownTimer.vue")['default']
+export const LazyError404: typeof import("../components/Error404.vue")['default']
 export const LazyFormularioColumna: typeof import("../components/FormularioColumna.vue")['default']
 export const LazyFormularioColumnaLanding: typeof import("../components/FormularioColumnaLanding.vue")['default']
 export const LazyFormularioColumnaModificaPlanes: typeof import("../components/FormularioColumnaModificaPlanes.vue")['default']

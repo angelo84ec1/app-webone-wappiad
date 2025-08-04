@@ -1,0 +1,37 @@
+import { d as defineEventHandler, g as getRequestHost, s as setHeader } from '../runtime.mjs';
+import 'node:http';
+import 'node:https';
+import 'fs';
+import 'path';
+import 'vue';
+import 'node:fs';
+import 'node:url';
+import 'consola/core';
+
+const robots_txt = defineEventHandler((event) => {
+  const hostname = getRequestHost(event);
+  const robots = `User-agent: *
+  Allow: /
+  
+  # Disallow admin and private areas
+  Disallow: /admin/
+  Disallow: /private/
+  Disallow: /_nuxt/
+  Disallow: /api/
+  
+  # Allow important files
+  Allow: /api/sitemap
+  Allow: /*.css$
+  Allow: /*.js$
+  
+  # Sitemap
+  Sitemap: https://${hostname}/sitemap.xml
+  
+  # Crawl delay (optional)
+  Crawl-delay: 1`;
+  setHeader(event, "content-type", "text/plain");
+  return robots;
+});
+
+export { robots_txt as default };
+//# sourceMappingURL=robots.txt.mjs.map

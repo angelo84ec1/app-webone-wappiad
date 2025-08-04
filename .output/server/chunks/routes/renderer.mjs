@@ -1,8 +1,8 @@
 import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'vue-bundle-renderer/runtime';
-import { e as eventHandler, s as setResponseHeader, a as send, g as getResponseStatus, b as setResponseStatus, u as useNitroApp, c as setResponseHeaders, j as joinRelativeURL, f as useRuntimeConfig, h as getQuery, i as createError, k as getRouteRules, l as getResponseStatusText } from '../runtime.mjs';
+import { e as eventHandler, a as setResponseHeader, b as send, c as getResponseStatus, f as setResponseStatus, u as useNitroApp, h as setResponseHeaders, j as joinRelativeURL, i as useRuntimeConfig, k as getQuery, l as createError, m as getRouteRules, n as getResponseStatusText } from '../runtime.mjs';
 import { stringify, uneval } from 'devalue';
 import { renderSSRHead } from '@unhead/ssr';
-import { version, unref } from 'vue';
+import { unref, version } from 'vue';
 import { createServerHead as createServerHead$1 } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
 import 'node:http';
@@ -11,6 +11,7 @@ import 'fs';
 import 'path';
 import 'node:fs';
 import 'node:url';
+import 'consola/core';
 
 function defineRenderHandler(handler) {
   return eventHandler(async (event) => {
@@ -98,7 +99,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Desarrollo de web a la medida - Desarrollo de Apps - Entrenamiento de Agentes IA - Programadores Full Stack - Desarrollo Sistemas SAAS - Arquitectos de Cloud."},{"name":"format-detection","content":"telephone=no"},{"name":"keywords","content":"Desarrollo web - Desarrollo apps- Dntrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"}],"style":[],"script":[{"src":"https://www.paypal.com/sdk/js?client-id=test&currency=USD","async":true}],"noscript":[],"title":"WAPPIAD S.A.S. Web - App - Inteligencia Artifical - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI","htmlAttrs":{"lang":"es"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Desarrollo de web a la medida - Desarrollo de Apps - Entrenamiento de Agentes IA - Programadores Full Stack - Desarrollo Sistemas SAAS - Arquitectos de Cloud."},{"name":"format-detection","content":"telephone=no"},{"name":"keywords","content":"Desarrollo web - Desarrollo apps- Dntrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"}],"style":[],"script":[{"src":"https://www.paypal.com/sdk/js?client-id=test&currency=USD","async":true}],"noscript":[],"title":"WAPPIAD S.A.S. Web - App - Inteligencia Artificial - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI","htmlAttrs":{"lang":"es"}};
 
 const appRootId = "__nuxt";
 
@@ -174,7 +175,7 @@ const renderer = defineRenderHandler(async (event) => {
       statusMessage: "Page Not Found: /__nuxt_error"
     });
   }
-  const isRenderingIsland = componentIslands ;
+  const isRenderingIsland = componentIslands;
   const islandContext = void 0;
   let url = ssrError?.url || islandContext?.url || event.path;
   const isRenderingPayload = PAYLOAD_URL_RE.test(url) && !isRenderingIsland;
@@ -195,7 +196,7 @@ const renderer = defineRenderHandler(async (event) => {
     url,
     event,
     runtimeConfig: useRuntimeConfig(event),
-    noSSR: !!true   ,
+    noSSR: true,
     head,
     error: !!ssrError,
     nuxt: void 0,
@@ -340,7 +341,7 @@ function renderPayloadJsonScript(opts) {
     type: "application/json",
     id: opts.id,
     innerHTML: contents,
-    "data-ssr": !(true )
+    "data-ssr": false
   };
   if (opts.src) {
     payload["data-src"] = opts.src;

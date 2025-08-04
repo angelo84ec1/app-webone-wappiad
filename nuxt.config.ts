@@ -17,11 +17,22 @@ export default defineNuxtConfig({
   // 🔧 CONFIGURACIÓN DE PUERTO PARA WAPPIAD
   nitro: {
     port: 3001,
-    host: '0.0.0.0'
+    host: "0.0.0.0"
   },
+
+    // Hooks para errores (opcional)
+    hooks: {
+      "render:errorMiddleware": (app) => {
+        app.use((error, req, res, next) => {
+          console.log("Error capturado:", error)
+          next(error)
+        })
+      }
+    },
 
   app: {
     head: {
+      titleTemplate: "%s - Wappiad",
       title: "WAPPIAD S.A.S. Web - App - Inteligencia Artificial - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI",
       htmlAttrs: {
         lang: "es",
@@ -60,6 +71,87 @@ export default defineNuxtConfig({
     },
   },
 
+
+
+
+// Sitemap configuration
+sitemap: {
+  hostname: "https://wappiad.com",
+  gzip: true,
+  routes: async () => {
+    // Rutas estáticas
+    const staticRoutes = [
+      {
+        url: "/",
+        changefreq: "daily",
+        priority: 1.0,
+        lastmod: new Date()
+      },
+      {
+        url: "/home",
+        changefreq: "monthly",
+        priority: 0.8,
+        lastmod: new Date()
+      },
+      {
+        url: "/servicios",
+        changefreq: "weekly",
+        priority: 0.9,
+        lastmod: new Date()
+      },
+      {
+        url: "/contacto",
+        changefreq: "monthly",
+        priority: 0.7,
+        lastmod: new Date()
+      },
+      {
+        url: "/chatbotconinteligenciaartificial",
+        changefreq: "daily",
+        priority: 0.8,
+        lastmod: new Date()
+      }
+
+    ]
+    
+    // Rutas dinámicas (ejemplo)
+    let dynamicRoutes = []
+    try {
+      // Si tienes una API para blog posts
+      // const posts = await $fetch("https://tu-api.com/posts")
+      // dynamicRoutes = posts.map(post => ({
+      //   url: `/blog/${post.slug}`,
+      //   changefreq: "weekly",
+      //   priority: 0.6,
+      //   lastmod: new Date(post.updatedAt)
+      // }))
+    } catch (error) {
+      console.log("Error fetching dynamic routes for sitemap:", error)
+    }
+    
+    return [...staticRoutes, ...dynamicRoutes]
+  },
+  defaults: {
+    changefreq: "daily",
+    priority: 0.8,
+    lastmod: new Date()
+  }
+},
+
+robots: {
+  UserAgent: "*",
+  Allow: "/",
+  Disallow: [
+    "/admin/",
+    "/private/",
+    "/_nuxt/",
+    "/api/",
+    "/*.json$"
+  ],
+  Sitemap: "https://wappiad.com/sitemap.xml",
+  CrawlDelay: 1
+},
+
   runtimeConfig: {
     public: {
       baseURL: process.env.STRAPI_URL || "http://localhost:1337",
@@ -97,6 +189,7 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt", 
     "@sidebase/nuxt-pdf", 
+    "@nuxtjs/sitemap",
     // "nuxt-proxy", // ❌ COMENTADO TEMPORALMENTE
     "@nuxtjs/i18n"
    
@@ -107,11 +200,11 @@ export default defineNuxtConfig({
 
   // 🔧 CONFIGURACIÓN DE PROXY (si la necesitas más adelante)
   // proxy: {
-  //   '/api/': {
-  //     target: 'http://localhost:8080', // Tu servidor API
+  //   "/api/": {
+  //     target: "http://localhost:8080", // Tu servidor API
   //     changeOrigin: true,
   //     pathRewrite: {
-  //       '^/api/': '/api/'
+  //       "^/api/": "/api/"
   //     }
   //   }
   // },
@@ -123,7 +216,11 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    vueI18n: "./i18n.config.ts",
+    legacy: false,
+    locale: "es",
+    fallbackLocale: "es",
+    // NO lazy ni langDir
+    vueI18n: "./i18n.config.ts", // archivo con defineI18nConfig que exporta los mensajes
   },
 
 

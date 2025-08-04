@@ -4,9 +4,14 @@ import { usePaymentStore } from "@/store/payment/index.js";
 import { useRouter } from "vue-router";
 import { reactive } from "vue";
 
+
 const store = usePaymentStore();
 const router = useRouter();
 const user = true;
+
+function redirectToUrl() {
+  window.location.href = 'https://wafidely.com/aiembudo/688d2e1b1ba36e68f0bae809';
+}
 
 const Subscription = reactive([
   {
@@ -161,11 +166,11 @@ onMounted(() => {
 
         <div class="mt-[25px] flex justify-center w-7/10">
           <button
-            class="button w-full ml-20 font-medium"
-            @click="addToCart(sub)"
-          >
-            {{ $t("pages.planes.button") }}
-          </button>
+    class="button w-full ml-20 font-medium"
+    @click="redirectToUrl"
+  >
+  {{ $t(`pages.planes.button`) }}
+</button>
         </div>
       </div>
     </div>

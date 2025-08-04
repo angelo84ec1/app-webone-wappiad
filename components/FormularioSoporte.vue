@@ -314,7 +314,7 @@ export default {
       };
 
       // Use strapi email plugin to send email
-      fetch(`${baseURL}/email`, {
+      fetch(`${baseURL}/email/`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",

@@ -1,3 +1,19 @@
+
+<script setup>
+useHead({
+  title: "Crea tu Agente de IA para WhatsApp y Web - Automatización Inteligente en Colombia, Perú, Brasil, Chile, México, Costa Rica, Argentina y Ecuador",
+
+  meta: [
+    {
+      name: "description",
+      content:
+  "Creamos agentes de IA personalizados que automatizan tareas repetitivas en WhatsApp, Instagram, Facebook, Email y Web. Especialistas en Colombia, Perú y Ecuador. Ahorra tiempo y escala tu negocio con IA."
+
+    },
+  ],
+})
+</script>
+
 <template>
     <ui-header></ui-header>
    
@@ -6,9 +22,9 @@
   
   <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current text-[#38f5b3]" viewBox="0 0 24 24">
     <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6zm1 7V3.5L18.5 9H15zM8 13h8v2H8v-2zm0 4h5v2H8v-2zm0-8h8v2H8V9z"/>
-  </svg>
+  </svg><h1 class="text-[#38f5b3]">
     
-  Caso de Éxito - Chat Bot en Whatsapp con IA</div>
+  Caso de Éxito Agente de IA para WhatsApp y Web - Automatización Inteligente en Colombia, Perú, Brasil, Chile, México, Costa Rica, Argentina y Ecuador - Chat Bot en Whatsapp con IA</h1></div>
 
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
     <!-- Columna Izquierda: Imagen -->
@@ -84,7 +100,7 @@
 
 <!-- Acceso y transferencia -->
 <div>
-  <h2 class="text-lg font-bold mb-2">Escallabilidad</h2>
+  <h2 class="text-lg font-bold mb-2">Escalabilidad</h2>
   <p>
     Podemos automatizar varias de tus tareas repetitivas
   </p>

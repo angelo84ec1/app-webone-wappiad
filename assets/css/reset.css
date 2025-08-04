@@ -110,6 +110,7 @@ select {
 
 h1 {
   font-size: var(--heading-1);
+  color: #38f5b3 ;
 }
 
 h2 {
