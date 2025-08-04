@@ -3,10 +3,8 @@ import 'node:http';
 import 'node:https';
 import 'fs';
 import 'path';
-import 'vue';
 import 'node:fs';
 import 'node:url';
-import 'consola/core';
 
 const sitemap_xml = defineEventHandler(async (event) => {
   const hostname = "https://wappiad.com";
@@ -23,6 +21,7 @@ const sitemap_xml = defineEventHandler(async (event) => {
   const dynamicRoutes = [];
   const allRoutes = [...staticRoutes, ...dynamicRoutes];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${allRoutes.map(
     (route) => `<url>

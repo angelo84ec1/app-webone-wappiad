@@ -3,10 +3,8 @@ import 'node:http';
 import 'node:https';
 import 'fs';
 import 'path';
-import 'vue';
 import 'node:fs';
 import 'node:url';
-import 'consola/core';
 
 const robots_txt = defineEventHandler((event) => {
   const hostname = getRequestHost(event);
@@ -25,7 +23,8 @@ const robots_txt = defineEventHandler((event) => {
   Allow: /*.js$
   
   # Sitemap
-  Sitemap: https://${hostname}/sitemap.xml
+Sitemap: https://${hostname}/sitemap.xml
+
   
   # Crawl delay (optional)
   Crawl-delay: 1`;

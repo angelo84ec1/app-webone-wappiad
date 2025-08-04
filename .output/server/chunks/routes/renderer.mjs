@@ -11,7 +11,6 @@ import 'fs';
 import 'path';
 import 'node:fs';
 import 'node:url';
-import 'consola/core';
 
 function defineRenderHandler(handler) {
   return eventHandler(async (event) => {
@@ -99,7 +98,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Desarrollo de web a la medida - Desarrollo de Apps - Entrenamiento de Agentes IA - Programadores Full Stack - Desarrollo Sistemas SAAS - Arquitectos de Cloud."},{"name":"format-detection","content":"telephone=no"},{"name":"keywords","content":"Desarrollo web - Desarrollo apps- Dntrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"}],"style":[],"script":[{"src":"https://www.paypal.com/sdk/js?client-id=test&currency=USD","async":true}],"noscript":[],"title":"WAPPIAD S.A.S. Web - App - Inteligencia Artificial - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI","htmlAttrs":{"lang":"es"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Desarrollo de web a la medida - Desarrollo de Apps - Entrenamiento de Agentes IA - Programadores Full Stack - Desarrollo Sistemas SAAS - Arquitectos de Cloud."},{"name":"format-detection","content":"telephone=no"},{"name":"keywords","content":"Desarrollo web - Desarrollo apps- Dntrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"}],"style":[],"script":[{"src":"https://www.paypal.com/sdk/js?client-id=test&currency=USD","async":true}],"noscript":[],"titleTemplate":"%s - Wappiad","title":"WAPPIAD S.A.S. Web - App - Inteligencia Artificial - Digital - Data - Entrenamiento de Agentes IA - Programadores Full Stack de Inteligencia Artificial - Desarrollo de Apps - Programadores de Inteligencia Artificial - Expertos de IA - Expertos AI","htmlAttrs":{"lang":"es"}};
 
 const appRootId = "__nuxt";
 

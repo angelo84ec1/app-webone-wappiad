@@ -17,7 +17,8 @@ export default defineEventHandler((event) => {
   Allow: /*.js$
   
   # Sitemap
-  Sitemap: https://${hostname}/sitemap.xml
+Sitemap: https://wappiad.com/sitemap.xml
+
   
   # Crawl delay (optional)
   Crawl-delay: 1`

@@ -189,7 +189,7 @@ robots: {
   modules: [
     "@pinia/nuxt", 
     "@sidebase/nuxt-pdf", 
-    "@nuxtjs/sitemap",
+    // "@nuxtjs/sitemap",
     // "nuxt-proxy", // ❌ COMENTADO TEMPORALMENTE
     "@nuxtjs/i18n"
    
