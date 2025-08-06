@@ -51,7 +51,7 @@ export default defineNuxtConfig({
         {
           name: "keywords",
           content:
-            "Desarrollo web - Desarrollo apps- Dntrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp",
+            "Desarrollo web - Desarrollo apps- Entrenamiento de agentes con inteligencia artificial - Bots en whatsapp - Sistema de agendamiento de citas con agentes de IA en whatsapp",
         }, // Palabras clave añadidas
       ],
       link: [

@@ -10,7 +10,7 @@ const router = useRouter();
 const user = true;
 
 function redirectToUrl() {
-  window.location.href = 'https://wafidely.com/aiembudo/688d2e1b1ba36e68f0bae809';
+  window.location.href = 'https://wafidely.com/aiembudo/689370f31ba36e68f0bae824';
 }
 
 const Subscription = reactive([

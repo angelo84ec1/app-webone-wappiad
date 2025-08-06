@@ -10,7 +10,7 @@
       <span class="text-lg">{{ $t("layout.footer.description") }}</span>
     </p>
     <a
-  href="https://wafidely.com/aiembudo/688d2e1b1ba36e68f0bae809"
+  href="https://wafidely.com/aiembudo/689370f31ba36e68f0bae824"
   target="_blank"
   rel="noopener"
 >
