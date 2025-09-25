@@ -2,860 +2,1284 @@
 import PinnedCard from "~/components/PinnedCard.vue";
 import LanderSlider from "~/components/views/landing/LanderSlider.vue";
 import maskGroup from '@/assets/images/background-mateo.png'
-
 </script>
 
 <template>
-  <ui-header
-    class="mb-0 bg-secondary bg-indigo-600 bg-gray-800 p-0 text-white"
-  ></ui-header>
+  <ui-header class="mb-0 bg-secondary bg-indigo-600 bg-gray-800 p-0 text-white"></ui-header>
 
   <LanderSlider />
-  <!-- <views-landing-scroll-section /> -->
 
-  <div class="hidden sm:hidden lg:block bg-[#232c4d] relative items-center h-64 sm:h-120 lg:h-full pb-12">
-    <div class="max-w-7xl mx-auto  sm:px-6 lg:py-20 lg:px-8 relative -mt-56">
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-4 relative -mt-8">
-        <div
-          class="bg-white overflow-hidden shadow sm:rounded-lg dark:bg-gray-900"
-        >
-
-       
-          <div class="px-4 py-15 sm:p-6">
-            <dl>
-              <dt
-                class="text-sm leading-5 font-medium text-gray-500 truncate dark:text-gray-400"
-              >
-                {{ $t("pages.landing.pricing.cardOne.title") }}
-              </dt>
-              <dd
-                class="mt-1 text-3xl leading-9 font-semibold text-[#18f3dc] dark:text-[#18f3dc]"
-              >
-                +6
-              </dd>
-            </dl>
-          </div>
+  <!-- Stats Section Mejorada -->
+  <div class="section-spacing bg-primary-dark relative items-center">
+    <div class="container">
+      <div class="stats-grid-improved">
+        <div class="stat-card-improved">
+          <div class="stat-icon">🚀</div>
+          <dl>
+            <dt class="stat-label-improved">
+              {{ $t("pages.landing.pricing.cardOne.title") }}
+            </dt>
+            <dd class="stat-value-improved">+6</dd>
+          </dl>
         </div>
-        <div
-          class="bg-white overflow-hidden shadow sm:rounded-lg dark:bg-gray-900"
-        >
-          <div class="px-4 py-0 sm:p-6">
-            <dl>
-              <dt
-                class="text-sm leading-5 font-medium text-gray-500 truncate dark:text-gray-400"
-              >
-                {{ $t("pages.landing.pricing.cardTwo.title") }}
-              </dt>
-              <dd
-                class="mt-1 text-3xl leading-9 font-semibold text-[#18f3dc] dark:text-[#18f3dc]"
-              >
-                +10
-              </dd>
-            </dl>
-          </div>
+        
+        <div class="stat-card-improved">
+          <div class="stat-icon">⭐</div>
+          <dl>
+            <dt class="stat-label-improved">
+              {{ $t("pages.landing.pricing.cardTwo.title") }}
+            </dt>
+            <dd class="stat-value-improved">+10</dd>
+          </dl>
         </div>
-        <div
-          class="bg-white overflow-hidden shadow sm:rounded-lg dark:bg-gray-900"
-        >
-          <div class="px-4 py-5 sm:p-6">
-            <dl>
-              <dt
-                class="text-sm leading-5 font-medium text-gray-500 truncate dark:text-gray-400"
-              >
-                {{ $t("pages.landing.pricing.cardThree.title") }}
-              </dt>
-              <dd
-                class="mt-1 text-3xl leading-9 font-semibold text-[#18f3dc] dark:text-[#18f3dc]"
-              >
-                +15
-              </dd>
-            </dl>
-          </div>
+        
+        <div class="stat-card-improved">
+          <div class="stat-icon">💼</div>
+          <dl>
+            <dt class="stat-label-improved">
+              {{ $t("pages.landing.pricing.cardThree.title") }}
+            </dt>
+            <dd class="stat-value-improved">+15</dd>
+          </dl>
         </div>
-        <div
-          class="bg-white overflow-hidden shadow sm:rounded-lg dark:bg-gray-900"
-        >
-          <div class="px-4 py-0 sm:p-6">
-            <dl>
-              <dt
-                class="text-sm leading-5 font-medium text-gray-500 truncate dark:text-gray-400"
-              >
-                {{ $t("pages.landing.pricing.cardFour.title") }}
-              </dt>
-              <dd
-                class="mt-1 text-3xl leading-9 font-semibold text-[#18f3dc] dark:text-[#18f3dc]"
-              >
-                +8
-              </dd>
-            </dl>
-          </div>
+        
+        <div class="stat-card-improved">
+          <div class="stat-icon">🎯</div>
+          <dl>
+            <dt class="stat-label-improved">
+              {{ $t("pages.landing.pricing.cardFour.title") }}
+            </dt>
+            <dd class="stat-value-improved">+8</dd>
+          </dl>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <section class="relative text-white py-20 px-4 overflow-hidden z-0">
-    <!-- Imagen de fondo a la izquierda -->
+  <!-- About Section Mejorada -->
+  <section class="section-spacing bg-white relative overflow-hidden">
     <img
       :src="maskGroup"
       alt="Fondo Mateo"
-      class="absolute left-0 top-0 h-full w-1/2 object-cover z-0"
+      class="absolute left-0 top-0 h-full w-1/2 object-cover opacity-50"
     />
-
     
-    <div class="font-manrope text-5xl text-center font-bold text-gray-900 mb-4">
-    {{ $t("pages.landing.about.title") }}
-  </div>
-  <div class="text-gray-500 text-center text-3xl leading-12 mb-9">
-   
-    {{ $t("pages.landing.about.description") }}
-  </div>
-    <div class="mx-auto flex flex-col md:flex-row justify-between items-center">
-      <div class="md:w-1/2 mb-10 md:mb-0">
-     
-        <h2 class="text-3xl font-bold leading-tight mb-18 text-[#232c4d] px-8">
-         
-          {{ $t("pages.landing.procesos.wappiad") }}
+    <div class="container relative">
+      <div class="section-header-improved">
+        <h2 class="section-title-improved">
+          {{ $t("pages.landing.about.title") }}
         </h2>
-        <h2 class="text-xl mb-4 text-[#232c4d] p-8 px-8 z-0">
-        {{ $t("pages.landing.versiculo.mateo") }}
-        </h2>
+        <p class="section-description-improved">
+          {{ $t("pages.landing.about.description") }}
+        </p>
       </div>
-      <div class="md:w-1/2">
-        <img
-          src="~/assets/images/Mask group.png"
-          alt="Hero Image"
-          class="w-full rounded-xl"
-        />
+
+      <div class="content-grid-improved">
+        <div class="content-text">
+          <h3 class="content-title-improved">
+            {{ $t("pages.landing.procesos.wappiad") }}
+          </h3>
+          <p class="content-subtitle-improved">
+            {{ $t("pages.landing.versiculo.mateo") }}
+          </p>
+        </div>
+        <div class="content-image">
+          <img
+            src="~/assets/images/Mask group.png"
+            alt="Hero Image"
+            class="rounded-xl w-full shadow-lg hover-scale-effect"
+          />
+        </div>
       </div>
     </div>
-    
   </section>
 
   <PinnedCard />
-  <!-- <div
-    id="services"
-    class="section container relative rounded-lg bg-white z-[-2]"
-  >
-    <div class="fixed bg-gray-300 h-[100px] w-[100px] scrol-box"></div>
-    <div
-      class="hidden lg:mt-0 lg:col-span-5 lg:flex pb-12 pin-sec !py-[200px] justify-between"
-    >
-      <div class="flex flex-col items-center gap-7 pin-left">
-        <div v-for="(content, index) in pinContent">
-          <div
-            class="flex items-center gap-4 h-[40vh] flex-col max-w-[430px] relative"
-          >
-            <img :src="pinImage[index]" alt="icon" class="w-20 h-20" />
-            <div class="flex justify-center flex-col items-center">
-              <h3 class="box-title">
-                {{ content.title }}
-              </h3>
-              <p class="box-content text-center">{{ content.description }}</p>
+
+  <!-- Portfolio Section Mejorada -->
+  <section class="section-spacing bg-gray-50">
+    <div class="container">
+      <div class="section-header-improved">
+        <h2 class="section-title-improved">
+          {{ $t("pages.landing.portafolio.amc") }}
+        </h2>
+        <p class="section-description-improved">
+          {{ $t("pages.landing.portafolio.description") }}
+        </p>
+      </div>
+
+      <!-- Portfolio Items Mejorados -->
+      <div class="portfolio-container">
+        <!-- Proyecto 1: Colmena -->
+        <div class="portfolio-item-improved">
+          <div class="portfolio-content-improved">
+            <div class="portfolio-tags-improved">
+              <span class="tag-dark">REACT</span>
+              <span class="tag-dark">STRAPI</span>
+              <span class="tag-dark">AWS</span>
+              <span class="tag-dark">MYSQL</span>
+              <span class="tag-dark">API REST</span>
             </div>
+            <h3 class="portfolio-title-improved">
+              {{ $t("pages.landing.example.colmena") }}
+              <span class="text-accent">{{ $t("pages.landing.example.colmena2") }}</span>
+            </h3>
+            <p class="portfolio-description-improved">
+              {{ $t("pages.landing.example.description") }}
+            </p>
+            <div class="portfolio-details-improved">
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price.colmena") }}</strong>
+                <span class="text-gray-600">+4k</span>
+              </p>
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price.time") }}</strong>
+                <span class="text-gray-600">{{ $t("pages.landing.price.description") }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-improved">
+            <img src="~/assets/images/colmena_customer.png" alt="Colmena" class="portfolio-img" />
+          </div>
+        </div>
+
+        <!-- Proyecto 2: AMC -->
+        <div class="portfolio-item-improved portfolio-reverse">
+          <div class="portfolio-content-improved">
+            <div class="portfolio-tags-improved">
+              <span class="tag-light">NUXT 3</span>
+              <span class="tag-light">STRAPI</span>
+              <span class="tag-light">MONGO DB</span>
+              <span class="tag-light">AWS</span>
+            </div>
+            <h3 class="portfolio-title-improved">
+              {{ $t("pages.landing.example2.amc2") }}
+              <span class="text-accent">{{ $t("pages.landing.example2.amc3") }}</span>
+            </h3>
+            <p class="portfolio-description-improved">
+              {{ $t("pages.landing.example2.description") }}
+            </p>
+            <div class="portfolio-details-improved">
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price2.amc4") }}</strong>
+                <span class="text-gray-600">+5k</span>
+              </p>
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price2.time") }}</strong>
+                <span class="text-gray-600">{{ $t("pages.landing.price.description") }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-improved">
+            <img src="~/assets/images/amc_customer.png" alt="AMC" class="portfolio-img" />
+          </div>
+        </div>
+
+        <!-- Proyecto 3: Lexcob -->
+        <div class="portfolio-item-improved">
+          <div class="portfolio-content-improved">
+            <div class="portfolio-tags-improved">
+              <span class="tag-dark">REACT</span>
+              <span class="tag-dark">LAVAREL</span>
+              <span class="tag-dark">CPANEL</span>
+            </div>
+            <h3 class="portfolio-title-improved">
+              {{ $t("pages.landing.example3.lexcob") }}
+              <span class="text-accent">{{ $t("pages.landing.example3.lexcob1") }}</span>
+            </h3>
+            <p class="portfolio-description-improved">
+              {{ $t("pages.landing.example3.description") }}
+            </p>
+            <div class="portfolio-details-improved">
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price2.amc4") }}</strong>
+                <span class="text-gray-600">+7k</span>
+              </p>
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price3.time") }}</strong>
+                <span class="text-gray-600">{{ $t("pages.landing.price3.description") }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-improved">
+            <img src="~/assets/images/lexcob_customer.png" alt="Lexcob" class="portfolio-img" />
+          </div>
+        </div>
+
+        <!-- Proyecto 4: Nanocbd -->
+        <div class="portfolio-item-improved portfolio-reverse">
+          <div class="portfolio-content-improved">
+            <div class="portfolio-tags-improved">
+              <span class="tag-light">WOOCOMMERCE</span>
+              <span class="tag-light">SAP BUSINESS ONE</span>
+              <span class="tag-light">.NET</span>
+              <span class="tag-light">C#</span>
+            </div>
+            <h3 class="portfolio-title-improved">
+              {{ $t("pages.landing.example4.imvab") }}
+              <span class="text-accent">{{ $t("pages.landing.example4.imvab1") }}</span>
+            </h3>
+            <p class="portfolio-description-improved">
+              {{ $t("pages.landing.example4.description") }}
+            </p>
+            <div class="portfolio-details-improved">
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price4.imvab2") }}</strong>
+                <span class="text-gray-600">+6k</span>
+              </p>
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price4.time") }}</strong>
+                <span class="text-gray-600">{{ $t("pages.landing.price4.description") }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-improved">
+            <img src="~/assets/images/nanocbd_customer.png" alt="Nanocbd" class="portfolio-img" />
+          </div>
+        </div>
+
+        <!-- Proyecto 5: IGO Cars -->
+        <div class="portfolio-item-improved">
+          <div class="portfolio-content-improved">
+            <div class="portfolio-tags-improved">
+              <span class="tag-dark">FIGMA</span>
+              <span class="tag-dark">REACT NATIVE</span>
+              <span class="tag-dark">FIRBASE</span>
+              <span class="tag-dark">AWS</span>
+              <span class="tag-dark">GOOGLE CLOUD</span>
+              <span class="tag-dark">CHATGPT</span>
+            </div>
+            <h3 class="portfolio-title-improved">
+              {{ $t("pages.landing.example5.igo") }}
+              <span class="text-accent">{{ $t("pages.landing.example5.igo1") }}</span>
+            </h3>
+            <p class="portfolio-description-improved">
+              {{ $t("pages.landing.example5.description") }}
+            </p>
+            <div class="portfolio-details-improved">
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price5.igo2") }}</strong>
+                <span class="text-gray-600">+50k</span>
+              </p>
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price5.time") }}</strong>
+                <span class="text-gray-600">{{ $t("pages.landing.price5.description") }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-improved">
+            <img src="~/assets/images/igocars_customer.png" alt="IGO Cars" class="portfolio-img" />
+          </div>
+        </div>
+
+        <!-- Proyecto 6: Lino -->
+        <div class="portfolio-item-improved portfolio-reverse">
+          <div class="portfolio-content-improved">
+            <div class="portfolio-tags-improved">
+              <span class="tag-light">ANDROID</span>
+              <span class="tag-light">IOS</span>
+              <span class="tag-light">REACT</span>
+              <span class="tag-light">STRAPI</span>
+              <span class="tag-light">MYSQL</span>
+              <span class="tag-light">AWS</span>
+              <span class="tag-light">PAYMENTEZ</span>
+            </div>
+            <h3 class="portfolio-title-improved">
+              {{ $t("pages.landing.example6.lino") }}
+              <span class="text-accent">{{ $t("pages.landing.example6.lino1") }}</span>
+            </h3>
+            <p class="portfolio-description-improved">
+              {{ $t("pages.landing.example6.description") }}
+            </p>
+            <div class="portfolio-details-improved">
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price6.lino2") }}</strong>
+                <span class="text-gray-600">+8k</span>
+              </p>
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price6.time") }}</strong>
+                <span class="text-gray-600">{{ $t("pages.landing.price6.description") }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-improved">
+            <img src="~/assets/images/lino_customers.png" alt="Lino" class="portfolio-img" />
+          </div>
+        </div>
+
+        <!-- Proyecto 7: Wafidely -->
+        <div class="portfolio-item-improved">
+          <div class="portfolio-content-improved">
+            <div class="portfolio-tags-improved">
+              <span class="tag-dark">NUXT 3</span>
+              <span class="tag-dark">STRAPI</span>
+              <span class="tag-dark">AWS</span>
+              <span class="tag-dark">MYSQL</span>
+              <span class="tag-dark">API REST</span>
+              <span class="tag-dark">PYTHON</span>
+              <span class="tag-dark">DOCKER</span>
+              <span class="tag-dark">N8N</span>
+              <span class="tag-dark">TWILIO</span>
+              <span class="tag-dark">CHATGPT</span>
+              <span class="tag-dark">ELEVANLABS</span>
+            </div>
+            <h3 class="portfolio-title-improved">
+              {{ $t("pages.landing.example7.wafidely") }}
+              <span class="text-accent">{{ $t("pages.landing.example7.wafidely1") }}</span>
+            </h3>
+            <p class="portfolio-description-improved">
+              {{ $t("pages.landing.example7.description") }}
+            </p>
+            <div class="portfolio-details-improved">
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price7.wafidely2") }}</strong>
+                <span class="text-gray-600">+10k</span>
+              </p>
+              <p class="portfolio-detail">
+                <strong>{{ $t("pages.landing.price7.time") }}</strong>
+                <span class="text-gray-600">{{ $t("pages.landing.price7.description") }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-improved">
+            <img src="~/assets/images/wafidely_customer.png" alt="Wafidely" class="portfolio-img" />
           </div>
         </div>
       </div>
-      <div class="flex flex-col !z-10 h-[100vh] pin-right relative">
-        <h3
-          class="titulo max-w-3xl mb-5 font-bold tracking-wide tracking-tight leading-normal md:text-6xl dark:text-white animated-heading"
-        >
-          Why become a Member?
-        </h3>
-        <p class="mb-8" >
-          Join 4000+ members landing remote roles at global companies with
-          tailored career support.
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <div class="section-spacing bg-accent-light">
+    <div class="container">
+      <div class="section-header-improved">
+        <h2 class="section-title-improved">
+          {{ $t("pages.landing.wapp.title") }}
+        </h2>
+        <p class="section-description-improved">
+          {{ $t("pages.landing.wapp.description") }}
         </p>
-        <a
-          href="#"
-          class="gradient-button inline-flex max-w-[200px] items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-        >
-          Ver planes
+      </div>
+      
+      <div class="tech-showcase-improved">
+        <a target="_blank" href="" class="tech-item-improved">
+          <img alt="React" class="tech-logo-improved" src="@/assets/images/react.png" />
+        </a>
+        <a target="_blank" href="" class="tech-item-improved">
+          <img alt="SAP" class="tech-logo-improved" src="@/assets/images/sap.png" />
+        </a>
+        <a target="_blank" href="" class="tech-item-improved">
+          <img alt="Node.js" class="tech-logo-improved" src="@/assets/images/node.png" />
+        </a>
+        <a target="_blank" href="" class="tech-item-improved">
+          <img alt="Firebase" class="tech-logo-improved" src="@/assets/images/firbase.png" />
+        </a>
+        <a target="_blank" href="" class="tech-item-improved">
+          <img alt="LangChain" class="tech-logo-improved" src="@/assets/images/langchain.png" />
+        </a>
+        <a target="_blank" href="" class="tech-item-improved">
+          <img alt="Python" class="tech-logo-improved" src="@/assets/images/python.png" />
         </a>
       </div>
     </div>
-  </div> -->
-<!--  Portafolio de desarrollos -->
-
-  <section class="text-white px-4 -mt-15">
-    <div class="font-manrope text-5xl text-center font-bold text-gray-900 mb-4">
-    {{ $t("pages.landing.portafolio.amc") }}
-  </div>
-  <p class="text-gray-500 text-center text-3xl leading-12 mb-9">
-      {{ $t("pages.landing.portafolio.description") }}
-    </p>
-    <div class=" py-16 px-8">
-  <!-- Contenedor Principal -->
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Columna Izquierda: Imagen -->
-    <div class="w-full md:w-1/2">
-      <img
-        src="~/assets/images/colmena_customer.png"
-        alt="Imagen Ejemplo"
-        class="rounded-lg shadow-lg w-full"
-      />
-    </div>
-
-    <!-- Columna Derecha: Texto -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">REACT</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">STRAPI</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">AWS</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">MYSQL</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">API REST</span>
-      </div>
-      <!-- Título -->
-      <h2 class="text-3xl font-bold text-blue-900 leading-snug mb-4">
-
-        {{ $t("pages.landing.example.colmena") }}
-        <span style="color: #38f5b3;">{{ $t("pages.landing.example.colmena2") }}</span>
-      </h2>
-      <!-- Descripción -->
-      <p class="text-gray-700 text-lg mb-6">
-        {{ $t("pages.landing.example.description") }}
-      </p>
-      <!-- Detalles -->
-      <div class="text-gray-600">
-        <p class="mb-2">
-          <strong> {{ $t("pages.landing.price.colmena") }}</strong><a href="#" class="text-gray-600 ">+4k</a>
-        </p>
-        <p>
-          <strong>  {{ $t("pages.landing.price.time") }} </strong> <a href="#" class="text-gray-600 ">{{ $t("pages.landing.price.description") }}</a>
-        </p>
-      </div>
-    </div>
   </div>
 
-
-
-  <div class=" py-16 px-8">
-  <!-- Contenedor Principal -->
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Columna Izquierda: Texto -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">NUXT 3</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">STRAPI</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">MONGO DB</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">AWS</span>
-      </div>
-     <!-- Título -->
-     <h2 class="text-3xl font-bold text-blue-900 leading-snug mb-4">
-
-{{ $t("pages.landing.example2.amc2") }}
-<span style="color: #38f5b3;">{{ $t("pages.landing.example2.amc3") }}</span>
-</h2>
-<!-- Descripción -->
-<p class="text-gray-700 text-lg mb-6">
-{{ $t("pages.landing.example2.description") }}
-</p>
-<!-- Detalles -->
-<div class="text-gray-600">
-<p class="mb-2">
-  <strong> {{ $t("pages.landing.price2.amc4") }}</strong><a href="#" class="text-gray-600 "> +5k</a>
-</p>
-<p>
-  <strong>  {{ $t("pages.landing.price2.time") }} </strong> <a href="#" class="text-gray-600 ">{{ $t("pages.landing.price.description") }}</a>
-</p>
-      </div>
-    </div>
-
-    <!-- Columna Derecha: Imagen -->
-    <div class="w-full md:w-1/2">
-      <img
-        src="~/assets/images/amc_customer.png"
-        alt="Imagen Ejemplo"
-        class="rounded-lg shadow-lg w-full"
-      />
-    </div>
-  </div>
-</div>
-
-
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Columna Izquierda: Imagen -->
-    <div class="w-full md:w-1/2">
-      <img
-        src="~/assets/images/lexcob_customer.png"
-        alt="Imagen Ejemplo"
-        class="rounded-lg shadow-lg w-full"
-      />
-    </div>
-
-    <!-- Columna Derecha: Texto -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">REACT</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">LAVAREL</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">CPANEL</span>
-
-      </div>
-           <!-- Título -->
-     <h2 class="text-3xl font-bold text-blue-900 leading-snug mb-4">
-
-{{ $t("pages.landing.example3.lexcob") }}
-<span style="color: #38f5b3;">{{ $t("pages.landing.example3.lexcob1") }}</span>
-</h2>
-<!-- Descripción -->
-<p class="text-gray-700 text-lg mb-6">
-{{ $t("pages.landing.example3.description") }}
-</p>
-<!-- Detalles -->
-<div class="text-gray-600">
-<p class="mb-2">
-  <strong> {{ $t("pages.landing.price2.amc4") }}</strong><a href="#" class="text-gray-600 ">+7k</a>
-</p>
-<p>
-  <strong>  {{ $t("pages.landing.price3.time") }} </strong> <a href="#" class="text-gray-600 ">{{ $t("pages.landing.price3.description") }}</a>
-</p>
-      </div>
-    </div>
-  </div>
- 
-
-  <div class=" py-16 px-8">
-  <!-- Contenedor Principal -->
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Columna Izquierda: Texto -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">WOOCOMMERCE</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">SAP BUSINESS ONE</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">.NET</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">C#</span>
-      </div>
-       <!-- Título -->
-       <h2 class="text-3xl font-bold text-blue-900 leading-snug mb-4">
-
-{{ $t("pages.landing.example4.imvab") }}
-<span style="color: #38f5b3;">{{ $t("pages.landing.example4.imvab1") }}</span>
-</h2>
-<!-- Descripción -->
-<p class="text-gray-700 text-lg mb-6">
-{{ $t("pages.landing.example4.description") }}
-</p>
-<!-- Detalles -->
-<div class="text-gray-600">
-<p class="mb-2">
-  <strong> {{ $t("pages.landing.price4.imvab2") }}</strong><a href="#" class="text-gray-600 "> +6k</a>
-</p>
-<p>
-  <strong>  {{ $t("pages.landing.price4.time") }} </strong> <a href="#" class="text-gray-600 ">{{ $t("pages.landing.price4.description") }}</a>
-</p>
-      </div>
-    </div>
-
-    <!-- Columna Derecha: Imagen -->
-    <div class="w-full md:w-1/2">
-      <img
-        src="~/assets/images/nanocbd_customer.png"
-        alt="Imagen Ejemplo"
-        class="rounded-lg shadow-lg w-full"
-      />
-    </div>
-  </div>
-</div> 
-
-
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Columna Izquierda: Imagen -->
-    <div class="w-full md:w-1/2">
-      <img
-        src="~/assets/images/igocars_customer.png"
-        alt="Imagen Ejemplo"
-        class="rounded-lg shadow-lg w-full"
-      />
-    </div>
-
-    <!-- Columna Derecha: Texto -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">FIGMA</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">REACT NATIVE</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">FIRBASE</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">AWS</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">GOOGLE CLOUD</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">CHATGPT</span>
-      </div>
-       <!-- Título -->
-       <h2 class="text-3xl font-bold text-blue-900 leading-snug mb-4">
-
-{{ $t("pages.landing.example5.igo") }}
-<span style="color: #38f5b3;">{{ $t("pages.landing.example5.igo1") }}</span>
-</h2>
-<!-- Descripción -->
-<p class="text-gray-700 text-lg mb-6">
-{{ $t("pages.landing.example5.description") }}
-</p>
-<!-- Detalles -->
-<div class="text-gray-600">
-<p class="mb-2">
-  <strong> {{ $t("pages.landing.price5.igo2") }}</strong><a href="#" class="text-gray-600 ">+50k</a>
-</p>
-<p>
-  <strong>  {{ $t("pages.landing.price5.time") }} </strong> <a href="#" class="text-gray-600 ">{{ $t("pages.landing.price5.description") }}</a>
-</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class=" py-16 px-8">
-  <!-- Contenedor Principal -->
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Columna Izquierda: Texto -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">ANDROID</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">IOS</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">REACT</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">STRAPI</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">MYSQL</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">AWS</span>
-        <span class="bg-[#38f5b3] text-[#232c4d] text-sm font-semibold px-3 py-1 rounded-full">PAYMENTEZ</span>
-      </div>
-      <!-- Título -->
-      <h2 class="text-3xl font-bold text-blue-900 leading-snug mb-4">
-        {{ $t("pages.landing.example6.lino") }}
-<span style="color: #38f5b3;">{{ $t("pages.landing.example6.lino1") }}</span>
-</h2>
-<!-- Descripción -->
-<p class="text-gray-700 text-lg mb-6">
-{{ $t("pages.landing.example6.description") }}
-</p>
-<!-- Detalles -->
-<div class="text-gray-600">
-<p class="mb-2">
-  <strong> {{ $t("pages.landing.price6.lino2") }}</strong><a href="#" class="text-gray-600 ">+8k</a>
-</p>
-<p>
-  <strong>  {{ $t("pages.landing.price6.time") }} </strong> <a href="#" class="text-gray-600 ">{{ $t("pages.landing.price6.description") }}</a>
-</p>
-      </div>
-    </div>
-
-    <!-- Columna Derecha: Imagen -->
-    <div class="w-full md:w-1/2">
-      <img
-        src="~/assets/images/lino_customers.png"
-        alt="Imagen Ejemplo"
-        class="rounded-lg shadow-lg w-full"
-      />
-    </div>
-  </div>
-</div> 
-
-
-
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Columna Izquierda: Imagen -->
-    <div class="w-full md:w-1/2">
-      <img
-        src="~/assets/images/wafidely_customer.png"
-        alt="Imagen Ejemplo"
-        class="rounded-lg shadow-lg w-full"
-      />
-    </div>
-
-    <!-- Columna Derecha: Texto -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-      <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">NUXT 3</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">STRAPI</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">AWS</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">MYSQL</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">API REST</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">PYTHON</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">DOCKER</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">N8N</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">TWILIO</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">CHATGPT</span>
-        <span class="bg-[#232c4d] text-[#FFFFFF] text-sm font-semibold px-3 py-1 rounded-full">ELEVANLABS</span>
-      </div>
-      <!-- Título -->
-      <h2 class="text-3xl font-bold text-blue-900 leading-snug mb-4">
-        {{ $t("pages.landing.example7.wafidely") }}
-<span style="color: #38f5b3;">{{ $t("pages.landing.example7.wafidely1") }}</span>
-</h2>
-<!-- Descripción -->
-<p class="text-gray-700 text-lg mb-6">
-{{ $t("pages.landing.example7.description") }}
-</p>
-<!-- Detalles -->
-<div class="text-gray-600">
-<p class="mb-2">
-  <strong> {{ $t("pages.landing.price7.wafidely2") }}</strong><a href="#" class="text-gray-600 ">+10k</a>
-</p>
-<p>
-  <strong>  {{ $t("pages.landing.price7.time") }} </strong> <a href="#" class="text-gray-600 ">{{ $t("pages.landing.price7.description") }}</a>
-</p>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-
-
-
-
-
-
-  </section>
-
-  <div class="bg-[#38F5B3]/30 w-full px-4 pt-16 pb-16" id="faq">
-    <h2 class="text-4xl font-bold text-center pb-6">
-     
-      {{ $t("pages.landing.wapp.title") }}
-    </h2>
-    <p class="pt-6 pb-5 text-base max-w-2xl text-center m-auto">
-      {{ $t("pages.landing.wapp.description") }}
-    </p>
-    <div
-      class="mx-auto w-full max-w-5xl bg-[#ffffff]/70 justify-center items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 " style="border-radius: 9px;"
-    >
-      <a target="_blank" href="">
-        <img
-          alt=""
-          class="h-20 mx-auto"
-          
-          src="@/assets/images/react.png"
-        />
-      </a>
-      <a target="_blank" href="">
-        <img
-          alt=""
-          class="h-20 mx-auto"
-          src="@/assets/images/sap.png"
-        />
-      </a>
-      <a target="_blank" href="">
-        <img
-          alt=""
-          class="h-20 mx-auto"
-          src="@/assets/images/node.png"
-        />
-      </a>
-      <a target="_blank" href="">
-        <img
-          alt=""
-          class="h-20 mx-auto"
-          src="@/assets/images/firbase.png"
-        />
-      </a>
-      <a target="_blank" href="">
-        <img
-          alt=""
-          class="h-20 mx-auto"
-          src="@/assets/images/langchain.png"
-        />
-      </a>
-      <a target="_blank" href="">
-        <img
-          alt=""
-          class="h-20 mx-auto"
-          src="@/assets/images/python.png"
-        />
-      </a>
-    </div>
-  </div>
-
-
-
-
-
-  <section class="py-9">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
-      <div class="mb-12">
-        <h2
-          class="font-manrope text-5xl text-center font-bold text-gray-900 mb-4"
-        >
+  <!-- FAQ Section -->
+  <section class="section-spacing bg-white">
+    <div class="container">
+      <div class="section-header-improved">
+        <h2 class="section-title-improved">
           {{ $t("pages.landing.faq.title") }}
         </h2>
-        <p class="text-gray-500 text-center text-3xl leading-12 mb-9">
+        <p class="section-description-improved">
           {{ $t("pages.landing.faq.description") }}
         </p>
       </div>
-      <!--Grid-->
+
+      <div class="faq-container-improved">
+        <div class="faq-list-improved">
+          <details class="faq-item-improved">
+            <summary class="faq-question-improved">
+              {{ $t("pages.landing.faq.subscription_validity.question") }}
+              <div class="faq-icon-improved">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-plus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-minus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer-improved">
+              {{ $t("pages.landing.faq.subscription_validity.answer") }}
+            </div>
+          </details>
+
+          <details class="faq-item-improved">
+            <summary class="faq-question-improved">
+              {{ $t("pages.landing.faq.what_is_wafidely.question") }}
+              <div class="faq-icon-improved">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-plus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-minus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer-improved">
+              {{ $t("pages.landing.faq.what_is_wafidely.answer") }}
+            </div>
+          </details>
+
+          <details class="faq-item-improved">
+            <summary class="faq-question-improved">
+              {{ $t("pages.landing.faq.uses_ai.question") }}
+              <div class="faq-icon-improved">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-plus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-minus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer-improved">
+              {{ $t("pages.landing.faq.uses_ai.answer") }}
+            </div>
+          </details>
+
+          <details class="faq-item-improved">
+            <summary class="faq-question-improved">
+              {{ $t("pages.landing.faq.use_my_business_whatsapp_number.question") }}
+              <div class="faq-icon-improved">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-plus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-minus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer-improved">
+              {{ $t("pages.landing.faq.use_my_business_whatsapp_number.answer") }}
+            </div>
+          </details>
+
+          <details class="faq-item-improved">
+            <summary class="faq-question-improved">
+              {{ $t("pages.landing.faq.landing_page_for_marketing_campaigns.question") }}
+              <div class="faq-icon-improved">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-plus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-minus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer-improved">
+              {{ $t("pages.landing.faq.landing_page_for_marketing_campaigns.answer") }}
+            </div>
+          </details>
+
+          <details class="faq-item-improved">
+            <summary class="faq-question-improved">
+              {{ $t("pages.landing.faq.whatsapp_notifications_number.question") }}
+              <div class="faq-icon-improved">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-plus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="faq-minus">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer-improved">
+              {{ $t("pages.landing.faq.whatsapp_notifications_number.answer") }}
+            </div>
+          </details>
+        </div>
+      </div>
     </div>
   </section>
 
-
-
-  <div class="mx-auto max-w-6xl mt-5 p-8">
-    <div class="divide-y divide-[#38f5b3]">
-      <details class="group">
-       
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500"
-        >
-          {{ $t("pages.landing.faq.subscription_validity.question") }}
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#38f5b3"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#38f5b3"
-              class="block h-12 w-12 group-open:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#9dfa2b"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#9dfa2b"
-              class="hidden h-12 w-12 group-open:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 12h-15"
-              />
-            </svg>
-          </div>
-        </summary>
-        <div class="pb-4 text-secondary-500">
-          {{ $t("pages.landing.faq.subscription_validity.answer") }}
-        </div>
-      </details>
-      <details class="group">
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500"
-        >
-          {{ $t("pages.landing.faq.what_is_wafidely.question") }}
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#38f5b3"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#38f5b3"
-              class="block h-12 w-12 group-open:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#9dfa2b"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#9dfa2b"
-              class="hidden h-12 w-12 group-open:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 12h-15"
-              />
-            </svg>
-          </div>
-        </summary>
-        <div class="pb-4 text-secondary-500">
-          {{ $t("pages.landing.faq.what_is_wafidely.answer") }}
-        </div>
-      </details>
-      <details class="group">
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500"
-        >
-          {{ $t("pages.landing.faq.uses_ai.question") }}
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#38f5b3"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#38f5b3"
-              class="block h-12 w-12 group-open:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#9dfa2b"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#9dfa2b"
-              class="hidden h-12 w-12 group-open:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 12h-15"
-              />
-            </svg>
-          </div>
-        </summary>
-        <div class="pb-4 text-secondary-500">
-          {{ $t("pages.landing.faq.uses_ai.answer") }}
-        </div>
-      </details>
-      <details class="group">
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500"
-        >
-          {{ $t("pages.landing.faq.use_my_business_whatsapp_number.question") }}
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#38f5b3"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#38f5b3"
-              class="block h-12 w-12 group-open:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#9dfa2b"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#9dfa2b"
-              class="hidden h-12 w-12 group-open:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 12h-15"
-              />
-            </svg>
-          </div>
-        </summary>
-        <div class="pb-4 text-secondary-500">
-          {{ $t("pages.landing.faq.use_my_business_whatsapp_number.answer") }}
-        </div>
-      </details>
-      <details class="group">
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500"
-        >
-          {{
-            $t(
-              "pages.landing.faq.landing_page_for_marketing_campaigns.question"
-            )
-          }}
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#38f5b3"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#38f5b3"
-              class="block h-12 w-12 group-open:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#9dfa2b"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#9dfa2b"
-              class="hidden h-12 w-12 group-open:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 12h-15"
-              />
-            </svg>
-          </div>
-        </summary>
-        <div class="pb-4 text-secondary-500">
-          {{
-            $t("pages.landing.faq.landing_page_for_marketing_campaigns.answer")
-          }}
-        </div>
-      </details>
-      <details class="group">
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500"
-        >
-          {{ $t("pages.landing.faq.whatsapp_notifications_number.question") }}
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#38f5b3"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#38f5b3"
-              class="block h-12 w-12 group-open:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#9dfa2b"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#9dfa2b"
-              class="hidden h-12 w-12 group-open:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 12h-15"
-              />
-            </svg>
-          </div>
-        </summary>
-        <div class="pb-4 text-secondary-500">
-          {{ $t("pages.landing.faq.whatsapp_notifications_number.answer") }}
-        </div>
-      </details>
-     
-    </div>
-  </div>
-
   <ui-footer></ui-footer>
-
-  <!-- background-image: linear-gradient(135deg, #8b5cf6, #00ffff); -->
 </template>
 
 <style lang="scss">
+// Variables CSS estandarizadas
+:root {
+  --color-primary: #232c4d;
+  --color-primary-dark: #1a2142;
+  --color-accent: #38f5b3;
+  --color-accent-light: rgba(56, 245, 179, 0.1);
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+  
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+  
+  --border-radius-lg: 0.75rem;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition: 250ms ease;
+}
+
+// Utilidades base - Optimizado para móviles con márgenes seguros
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  
+  @media (min-width: 640px) {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs);
+  }
+  
+  @media (max-width: 360px) {
+    padding: 0 var(--spacing-sm);
+    margin: 0 var(--spacing-xs);
+  }
+}
+
+.section-spacing {
+  padding: var(--spacing-3xl) 0;
+  
+  @media (max-width: 768px) {
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+// Colores de fondo
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.bg-accent-light {
+  background-color: var(--color-accent-light);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+// Tipografía estandarizada - Optimizada para móviles con márgenes seguros
+.section-title-improved {
+  font-family: 'Manrope', sans-serif;
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    font-size: var(--font-size-3xl);
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-md);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: var(--font-size-2xl);
+    line-height: 1.3;
+    padding: 0 var(--spacing-lg);
+    margin: 0 var(--spacing-sm) var(--spacing-md);
+  }
+  
+  @media (max-width: 360px) {
+    font-size: 1.5rem;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-md);
+  }
+}
+
+.section-description-improved {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-500);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    font-size: var(--font-size-lg);
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) 0 var(--spacing-xs);
+    max-width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    padding: 0 var(--spacing-lg);
+    margin: 0 var(--spacing-sm) 0 var(--spacing-sm);
+    max-width: 100%;
+  }
+  
+  @media (max-width: 360px) {
+    font-size: 0.9rem;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) 0 var(--spacing-xs);
+  }
+}
+
+.section-header-improved {
+  margin-bottom: var(--spacing-3xl);
+  
+  @media (max-width: 768px) {
+    margin-bottom: var(--spacing-2xl);
+  }
+}
+
+.content-title-improved {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.3;
+  
+  @media (max-width: 768px) {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+.content-subtitle-improved {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+// Stats Section - Una sola fila
+.stats-grid-improved {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+  }
+}
+
+.stat-card-improved {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--box-shadow-lg);
+  text-align: center;
+  transition: transform var(--transition);
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+  
+  @media (max-width: 768px) {
+    padding: var(--spacing-lg);
+  }
+  
+  @media (max-width: 480px) {
+    padding: var(--spacing-md);
+  }
+}
+
+.stat-icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-sm);
+  
+  @media (max-width: 480px) {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-xs);
+  }
+}
+
+.stat-label-improved {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-xs);
+  word-wrap: break-word;
+  hyphens: auto;
+  
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+}
+
+.stat-value-improved {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  
+  @media (max-width: 480px) {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+// Content Grid
+.content-grid-improved {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+    
+    .content-text {
+      order: 2;
+    }
+    
+    .content-image {
+      order: 1;
+    }
+  }
+}
+
+// Portfolio Section
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+  
+  @media (max-width: 768px) {
+    gap: var(--spacing-2xl);
+  }
+}
+
+.portfolio-item-improved {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  &:nth-child(even) {
+    animation-delay: 200ms;
+  }
+  
+  &.portfolio-reverse {
+    .portfolio-content-improved {
+      order: 2;
+      
+      @media (max-width: 768px) {
+        order: 2;
+      }
+    }
+    
+    .portfolio-image-improved {
+      order: 1;
+      
+      @media (max-width: 768px) {
+        order: 1;
+      }
+    }
+  }
+}
+
+.portfolio-content-improved {
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs);
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 var(--spacing-lg);
+    margin: 0 var(--spacing-sm);
+  }
+  
+  @media (max-width: 360px) {
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs);
+  }
+}
+
+.portfolio-tags-improved {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-lg);
+  }
+  
+  @media (max-width: 480px) {
+    gap: 4px;
+    padding: 0 var(--spacing-lg);
+    margin: 0 var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  @media (max-width: 360px) {
+    gap: 2px;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-md);
+  }
+}
+
+.tag-dark, .tag-light {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 9999px;
+  transition: transform var(--transition);
+  white-space: nowrap;
+  
+  &:hover {
+    transform: translateY(-1px);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+  
+  @media (max-width: 360px) {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+}
+
+.tag-dark {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.tag-light {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.portfolio-title-improved {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    font-size: var(--font-size-2xl);
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-lg);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: var(--font-size-xl);
+    line-height: 1.4;
+    padding: 0 var(--spacing-lg);
+    margin: 0 var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  @media (max-width: 360px) {
+    font-size: 1.25rem;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-md);
+  }
+}
+
+.portfolio-description-improved {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-lg);
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    padding: 0 var(--spacing-lg);
+    margin: 0 var(--spacing-sm) var(--spacing-lg);
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 360px) {
+    font-size: 0.9rem;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-md);
+  }
+}
+
+.portfolio-details-improved {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs);
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 var(--spacing-lg);
+    margin: 0 var(--spacing-sm);
+  }
+  
+  @media (max-width: 360px) {
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs);
+  }
+}
+
+.portfolio-detail {
+  font-size: 1rem;
+  
+  strong {
+    color: var(--color-gray-900);
+    margin-right: var(--spacing-xs);
+  }
+}
+
+.portfolio-image-improved {
+  position: relative;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-lg);
+  transition: transform var(--transition);
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+// Tech Section - Una sola fila
+.tech-showcase-improved {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-md);
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+  }
+}
+
+.tech-item-improved {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  transition: transform var(--transition);
+  text-decoration: none;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.tech-logo-improved {
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+}
+
+// FAQ Section - Optimizado para móviles con márgenes seguros
+.faq-container-improved {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    margin: 0 var(--spacing-xs);
+    padding: 0 var(--spacing-md);
+  }
+  
+  @media (max-width: 480px) {
+    margin: 0 var(--spacing-sm);
+    padding: 0 var(--spacing-lg);
+  }
+  
+  @media (max-width: 360px) {
+    margin: 0 var(--spacing-xs);
+    padding: 0 var(--spacing-md);
+  }
+}
+
+.faq-list-improved {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.faq-item-improved {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition);
+  
+  &:hover {
+    box-shadow: var(--box-shadow-lg);
+    transform: translateY(-2px);
+  }
+  
+  &[open] {
+    .faq-plus {
+      display: none;
+    }
+    
+    .faq-minus {
+      display: block;
+    }
+  }
+}
+
+.faq-question-improved {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-gray-900);
+  cursor: pointer;
+  list-style: none;
+  transition: color var(--transition);
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  
+  &:hover {
+    color: var(--color-accent);
+  }
+  
+  @media (max-width: 768px) {
+    padding: var(--spacing-md);
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 480px) {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  @media (max-width: 360px) {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+.faq-icon-improved {
+  flex-shrink: 0;
+  margin-left: var(--spacing-md);
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent);
+  
+  @media (max-width: 480px) {
+    width: 20px;
+    height: 20px;
+    margin-left: var(--spacing-sm);
+  }
+}
+
+.faq-plus,
+.faq-minus {
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition);
+}
+
+.faq-plus {
+  display: block;
+}
+
+.faq-minus {
+  display: none;
+}
+
+.faq-answer-improved {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  font-size: 1rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  
+  @media (max-width: 768px) {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 var(--spacing-md) var(--spacing-sm);
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 360px) {
+    padding: 0 var(--spacing-sm) var(--spacing-xs);
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
+// Efectos hover
+.hover-scale-effect {
+  transition: transform var(--transition);
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Animaciones
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Optimizaciones adicionales para dispositivos muy pequeños con márgenes seguros
+@media (max-width: 360px) {
+  .section-title-improved {
+    font-size: 1.5rem;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-md);
+  }
+  
+  .section-description-improved {
+    font-size: 0.9rem;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) 0 var(--spacing-xs);
+  }
+  
+  .stat-card-improved {
+    padding: var(--spacing-sm);
+    margin: 0 2px;
+  }
+  
+  .portfolio-tags-improved {
+    gap: 2px;
+    padding: 0 var(--spacing-md);
+    margin: 0 var(--spacing-xs) var(--spacing-md);
+  }
+  
+  .tag-dark, .tag-light {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  
+  .faq-item-improved {
+    margin: 0 var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .tech-showcase-improved {
+    padding: var(--spacing-sm);
+    margin: 0 var(--spacing-xs);
+    gap: var(--spacing-xs);
+  }
+  
+  .tech-logo-improved {
+    height: 40px;
+  }
+  
+  // Asegurar que ningún elemento toque los bordes
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  // Elementos que podrían desbordarse
+  h1, h2, h3, h4, h5, h6, p, div, span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  // Contenedores principales con padding de seguridad
+  .section-spacing {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+}
+
+// Mantener estilos originales que funcionan
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -938,25 +1362,20 @@ import maskGroup from '@/assets/images/background-mateo.png'
   cursor: pointer;
 }
 
-/* Estilo de hover */
 .button:hover {
   background-color: #4a4a4a;
 }
 
-/* Estilo del contenedor en modo oscuro */
 .dark .container {
-  background-color: #333; /* Cambiar el color oscuro según tus preferencias */
-  color: #fff; /* Cambiar el color de texto en modo oscuro según tus preferencias */
+  background-color: #333;
+  color: #fff;
 }
-
-/* Estilos del fondo degradado en la sección */
 
 .titulo {
   background: linear-gradient(90deg, #18f3dc, #9dfa2b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  // color: transparent;
 }
 
 .gradient-button {
@@ -987,19 +1406,17 @@ import maskGroup from '@/assets/images/background-mateo.png'
 
 .custom-link {
   border-radius: 9px;
-
   z-index: 0;
 }
 
-/* Estilos para cada columna */
 .column {
-  flex: 1; /* Permitir que las columnas ocupen el mismo ancho */
+  flex: 1;
   padding: 16px;
   z-index: -1;
 }
 
 .desk {
-  flex: 1; /* Permitir que las columnas ocupen el mismo ancho */
+  flex: 1;
   padding: 16px;
   z-index: -1;
 }
@@ -1033,42 +1450,42 @@ import maskGroup from '@/assets/images/background-mateo.png'
 }
 
 .img1 {
-  display: block; /* Para asegurarse de que la imagen sea un elemento de bloque */
-  margin: 0 auto; /* Centra horizontalmente la imagen dentro de su contenedor */
-  position: relative; /* Si es necesario para otros estilos */
-  overflow: hidden; /* Si es necesario para otros estilos */
-  margin-top: -65px; /* Tu valor personalizado para el margen superior */
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: -65px;
 }
 
 @media only screen and (max-width: 1076px) {
   .img1 {
-    display: block; /* Para asegurarse de que la imagen sea un elemento de bloque */
-    margin: 0 auto; /* Centra horizontalmente la imagen dentro de su contenedor */
-    position: relative; /* Si es necesario para otros estilos */
-    overflow: hidden; /* Si es necesario para otros estilos */
-    margin-top: -40px; /* Tu valor personalizado para el margen superior */
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: -40px;
   }
 }
 
 .spacer {
-  margin-top: -33px; /* Altura del espacio entre los divs */
+  margin-top: -33px;
 }
 
 .spacerfoot {
-  height: 25px; /* Altura del espacio entre los divs */
+  height: 25px;
 }
 
 .classtitulo {
   font-size: 20px;
-  font-weight: bold; /* Agregar negrita */
+  font-weight: bold;
   flex-shrink: 0;
   padding: 15px 25px;
 }
 
 .bannerfoot img {
-  width: 100%; /* Ajustar la imagen al 100% del ancho de su contenedor */
-  height: auto; /* Mantener la proporción de aspecto original */
-  display: block; /* Para asegurarse de que la imagen sea un elemento de bloque */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .carousel__item {
@@ -1116,8 +1533,6 @@ import maskGroup from '@/assets/images/background-mateo.png'
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;

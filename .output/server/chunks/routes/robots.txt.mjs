@@ -7,7 +7,7 @@ import 'node:fs';
 import 'node:url';
 
 const robots_txt = defineEventHandler((event) => {
-  const hostname = getRequestHost(event);
+  getRequestHost(event);
   const robots = `User-agent: *
   Allow: /
   
@@ -23,7 +23,7 @@ const robots_txt = defineEventHandler((event) => {
   Allow: /*.js$
   
   # Sitemap
-Sitemap: https://${hostname}/sitemap.xml
+Sitemap: https://wappiad.com/sitemap.xml
 
   
   # Crawl delay (optional)
