@@ -508,6 +508,25 @@ import maskGroup from '@/assets/images/background-mateo.png'
 </template>
 
 <style lang="scss">
+
+
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
 // Variables CSS estandarizadas
 :root {
   --color-primary: #232c4d;

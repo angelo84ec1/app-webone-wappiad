@@ -168,6 +168,7 @@ robots: {
     "~/assets/css/global.css",
     "~/assets/css/main.css",
     "~/assets/scss/_swiper.scss",
+    "~/assets/css/mobiles-fix.css",
   ],
 
   postcss: {

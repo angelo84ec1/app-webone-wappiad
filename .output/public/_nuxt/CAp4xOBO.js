@@ -1,1 +1,0 @@
-import{o as e,c as a,a as t,b as o}from"./IButIFvp.js";const u={__name:"[...slug]",setup(r){return e(()=>{throw a({statusCode:404,statusMessage:"Página No Encontrada"})}),(s,n)=>(o(),t("div"))}};export{u as default};
