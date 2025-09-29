@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "nuxt amc_app",
+      name: "nuxt wappiad-web",
       script: './.output/server/index.mjs',
       env_production: {
         NODE_ENV: "production"

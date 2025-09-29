@@ -2,12 +2,31 @@
 import PinnedCard from "~/components/PinnedCard.vue";
 import LanderSlider from "~/components/views/landing/LanderSlider.vue";
 import maskGroup from '@/assets/images/background-mateo.png'
+import { ref, onMounted } from 'vue';
+
+const isLoading = ref(true);
+
+onMounted(async () => {
+  try {
+    // Esperar a que el DOM esté listo
+    await nextTick();
+    // Tiempo mínimo de loading
+    await new Promise(resolve => setTimeout(resolve, 800));
+  } finally {
+    isLoading.value = false;
+  }
+});
+
 </script>
 
 <template>
-  <ui-header class="mb-0 bg-secondary bg-indigo-600 bg-gray-800 p-0 text-white"></ui-header>
 
-  <LanderSlider />
+    <Loading :show="isLoading" />
+    
+    <!-- Cambiar v-show por v-if -->
+    <div v-if="!isLoading" class="page-content">
+      <ui-header class="mb-0 bg-secondary bg-indigo-600 bg-gray-800 p-0 text-white"></ui-header>
+      <LanderSlider />
 
   <!-- Stats Section Mejorada -->
   <div class="section-spacing bg-primary-dark relative items-center">
@@ -505,6 +524,7 @@ import maskGroup from '@/assets/images/background-mateo.png'
   </section>
 
   <ui-footer></ui-footer>
+   </div>
 </template>
 
 <style lang="scss">

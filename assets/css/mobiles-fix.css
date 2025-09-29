@@ -1,0 +1,41 @@
+/* Prevención global de desbordamiento */
+html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    position: relative;
+  }
+  
+  /* Todos los elementos */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Prevenir desbordamiento de medios */
+  img, video, iframe, svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Contenedores principales */
+  #__nuxt, .nuxt-app {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  
+  /* Prevenir gap muy grande */
+  @media (max-width: 1024px) {
+    [style*="gap"] {
+      gap: 2rem !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    [style*="gap"] {
+      gap: 1rem !important;
+    }
+  }
